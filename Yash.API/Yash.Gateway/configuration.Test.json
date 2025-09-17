@@ -1,0 +1,273 @@
+{
+  "ReRoutes": [
+
+    {
+      "DownstreamPathTemplate": "/serviceidentity/api/Login/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/login/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceaccount/api/Recognitionlevel/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Recognitionlevel/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceaccount/api/v1/Application/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Application/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceaccount/api/v1/Account/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Account/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceaccount/api/v1/Document/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Document/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceaccount/api/v1/OverDraft/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/OverDraft/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceaccount/api/v1/OverRides/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/OverRides/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicecustomer/api/v1/customer/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Customer/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicecustomer/api/v1/Customer360/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Customer360/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicesalescrm/api/Collections/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Collections/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicesalescrm/api/Process/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Process/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicesalescrm/api/CrmMasterData/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/CrmMasterData/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicesalescrm/api/v1/Sales/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Sales/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicesalescrm/api/v1/Campaign/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Campaign/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceexternal/api/Precision/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Precision/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceexternal/api/QualifileScreening/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/QualifileScreening/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceexternal/api/DeluxeChecks/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/DeluxeChecks/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceexternal/api/CardWizard/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/CardWizard/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceexternal/api/Fbc/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Fbc/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceexternal/api/Q2InternetBanking/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Q2InternetBanking/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicemdm/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicemdm/api/Warmlist/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "9901TAPPHZNV01",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Warmlist/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://9901TAPPHZNV01:90"
+  }
+}

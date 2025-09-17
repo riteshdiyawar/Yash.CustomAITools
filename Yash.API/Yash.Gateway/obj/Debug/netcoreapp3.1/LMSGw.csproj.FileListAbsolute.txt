@@ -1,0 +1,215 @@
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\web.config
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.Demo.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.Development.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.Test.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.UAT.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.exe
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.deps.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.dev.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.pdb
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Ocelot.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.csprojAssemblyReference.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfoInputs.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfo.cs
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CoreCompileInputs.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.Manifest.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.xml
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\scopedcss\bundle\LMSGw.styles.css
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.RazorTargetAssemblyInfo.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CopyComplete
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.pdb
+C:\Users\sandeep.kotipalli\Downloads\IBC.Horizon\IBC.Horizon\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.genruntimeconfig.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\web.config
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.Demo.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.Development.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.Test.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\configuration.UAT.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.exe
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.deps.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.dev.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\LMSGw.pdb
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\Ocelot.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.csprojAssemblyReference.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfoInputs.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfo.cs
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CoreCompileInputs.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.Manifest.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.xml
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\scopedcss\bundle\LMSGw.styles.css
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.RazorTargetAssemblyInfo.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CopyComplete
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.pdb
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\HorizonGw\obj\Debug\netcoreapp3.1\LMSGw.genruntimeconfig.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\web.config
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.Demo.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.Development.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.Test.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.UAT.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.exe
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.deps.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.dev.json
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.pdb
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Ocelot.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfoInputs.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfo.cs
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CoreCompileInputs.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.Manifest.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.xml
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\scopedcss\bundle\LMSGw.styles.css
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.RazorTargetAssemblyInfo.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CopyComplete
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.dll
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.pdb
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.genruntimeconfig.cache
+C:\Users\sandeep.kotipalli\Downloads\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.csprojAssemblyReference.cache
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\web.config
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.Demo.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.Development.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.Test.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.UAT.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.exe
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.deps.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.dev.json
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.pdb
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Ocelot.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfoInputs.cache
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfo.cs
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CoreCompileInputs.cache
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.Manifest.cache
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.xml
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\scopedcss\bundle\LMSGw.styles.css
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.RazorTargetAssemblyInfo.cache
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CopyComplete
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.dll
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.pdb
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.genruntimeconfig.cache
+C:\Users\Gopi Matsa\Downloads\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.csprojAssemblyReference.cache
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\web.config
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.Demo.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.Development.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.Test.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\configuration.UAT.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.exe
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.deps.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.runtimeconfig.dev.json
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\LMSGw.pdb
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\Ocelot.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CoreCompileInputs.cache
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfoInputs.cache
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.AssemblyInfo.cs
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.RazorTargetAssemblyInfo.cache
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.csproj.CopyComplete
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.Manifest.cache
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\staticwebassets\LMSGw.StaticWebAssets.xml
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.dll
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.pdb
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.genruntimeconfig.cache
+D:\Projects\IBC.LMS\IBC.LMS\ApiGateways\LMSGw\obj\Debug\netcoreapp3.1\LMSGw.csprojAssemblyReference.cache

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "v5EncmVLzD4AHiRRHfbnzhTMhlopoxGrIv0dfV+1QVo=",
+  "Source": "Yash.API.Gateway",
+  "BasePath": "_content/Yash.API.Gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

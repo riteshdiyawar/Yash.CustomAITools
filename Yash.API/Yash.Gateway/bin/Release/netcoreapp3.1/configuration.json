@@ -1,0 +1,140 @@
+﻿{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/serviceidentity/api/Login/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/login/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceaccount/api/Recognitionlevel/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Recognitionlevel/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceaccount/api/v1/Account/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Account/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceaccount/api/v1/Document/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Document/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicecustomer/api/v1/customer/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Customer/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicecustomer/api/v1/Customer360/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Customer360/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicesalescrm/api/Collections/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Collections/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicesalescrm/api/Process/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Process/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicesalescrm/api/CrmMasterData/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/CrmMasterData/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/serviceexternal/api/Precision/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Precision/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/servicemdm/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.200.3.66",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://10.200.3.66:90"
+  }
+}

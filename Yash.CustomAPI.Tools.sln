@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yash.API.Gateway", "Yash.API\Yash.Gateway\Yash.API.Gateway.csproj", "{5ED9685E-2929-4897-9BC2-3441783E87D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yash.Users.API", "Yash.API\Yash.AI.APIs\Identity.API\Yash.Users.API.csproj", "{B8825C2A-1D76-433C-90C5-9A37BFF54E03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ED9685E-2929-4897-9BC2-3441783E87D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED9685E-2929-4897-9BC2-3441783E87D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED9685E-2929-4897-9BC2-3441783E87D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED9685E-2929-4897-9BC2-3441783E87D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8825C2A-1D76-433C-90C5-9A37BFF54E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8825C2A-1D76-433C-90C5-9A37BFF54E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8825C2A-1D76-433C-90C5-9A37BFF54E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8825C2A-1D76-433C-90C5-9A37BFF54E03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA7925FD-AE20-4229-B968-11EF474A5455}
+	EndGlobalSection
+EndGlobal

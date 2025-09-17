@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Yash.Users.API.props" />
+</Project>

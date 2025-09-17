@@ -1,0 +1,22 @@
+﻿{
+  "ReRoutes": [
+
+    {
+      "DownstreamPathTemplate": "/serviceidentity/api/Login/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44300
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Delete" ]
+    }
+   
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:44300"
+  }
+}
