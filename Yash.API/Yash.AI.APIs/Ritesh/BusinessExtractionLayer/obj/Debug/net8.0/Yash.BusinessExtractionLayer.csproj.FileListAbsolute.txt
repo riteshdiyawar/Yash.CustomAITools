@@ -1,0 +1,13 @@
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\bin\Debug\net8.0\Yash.BusinessExtractionLayer.deps.json
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\bin\Debug\net8.0\Yash.BusinessExtractionLayer.dll
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\bin\Debug\net8.0\Yash.BusinessExtractionLayer.pdb
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\Yash.BusinessExtractionLayer.csproj.AssemblyReference.cache
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\Yash.BusinessExtractionLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\Yash.BusinessExtractionLayer.AssemblyInfoInputs.cache
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\Yash.BusinessExtractionLayer.AssemblyInfo.cs
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\Yash.BusinessExtractionLayer.csproj.CoreCompileInputs.cache
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\Yash.BusinessExtractionLayer.sourcelink.json
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\Yash.BusinessExtractionLayer.dll
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\refint\Yash.BusinessExtractionLayer.dll
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\Yash.BusinessExtractionLayer.pdb
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\obj\Debug\net8.0\ref\Yash.BusinessExtractionLayer.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Yash.Users.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03f18022dd31977acf822f02ba5564eb7e6f1004")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9c10f47f3d73469f3379eb0f5ab8df412238022")]
 [assembly: System.Reflection.AssemblyProductAttribute("Yash.Users.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Yash.Users.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

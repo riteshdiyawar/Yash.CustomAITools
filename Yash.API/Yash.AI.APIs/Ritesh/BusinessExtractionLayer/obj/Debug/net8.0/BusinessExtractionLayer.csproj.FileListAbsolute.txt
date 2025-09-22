@@ -1,0 +1,12 @@
+E:\Yash\BusinessExtractionLayer\bin\Debug\net8.0\BusinessExtractionLayer.deps.json
+E:\Yash\BusinessExtractionLayer\bin\Debug\net8.0\BusinessExtractionLayer.dll
+E:\Yash\BusinessExtractionLayer\bin\Debug\net8.0\BusinessExtractionLayer.pdb
+E:\Yash\BusinessExtractionLayer\obj\Debug\net8.0\BusinessExtractionLayer.csproj.AssemblyReference.cache
+E:\Yash\BusinessExtractionLayer\obj\Debug\net8.0\BusinessExtractionLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\Yash\BusinessExtractionLayer\obj\Debug\net8.0\BusinessExtractionLayer.AssemblyInfoInputs.cache
+E:\Yash\BusinessExtractionLayer\obj\Debug\net8.0\BusinessExtractionLayer.AssemblyInfo.cs
+E:\Yash\BusinessExtractionLayer\obj\Debug\net8.0\BusinessExtractionLayer.csproj.CoreCompileInputs.cache
+E:\Yash\BusinessExtractionLayer\obj\Debug\net8.0\BusinessExtractionLayer.dll
+E:\Yash\BusinessExtractionLayer\obj\Debug\net8.0\refint\BusinessExtractionLayer.dll
+E:\Yash\BusinessExtractionLayer\obj\Debug\net8.0\BusinessExtractionLayer.pdb
+E:\Yash\BusinessExtractionLayer\obj\Debug\net8.0\ref\BusinessExtractionLayer.dll

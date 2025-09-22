@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yash.API.Gateway", "Yash.AP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yash.Users.API", "Yash.API\Yash.AI.APIs\Identity.API\Yash.Users.API.csproj", "{B8825C2A-1D76-433C-90C5-9A37BFF54E03}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yash.CustomTool.API.Ritesh", "Yash.API\Yash.AI.APIs\Ritesh\API\Yash.CustomTool.API.Ritesh.csproj", "{C8183C81-112D-473F-B5CF-193990D792F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yash.BusinessExtractionLayer", "Yash.API\Yash.AI.APIs\Ritesh\BusinessExtractionLayer\Yash.BusinessExtractionLayer.csproj", "{45C29851-3725-49C4-B032-18CB393A6E05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B8825C2A-1D76-433C-90C5-9A37BFF54E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8825C2A-1D76-433C-90C5-9A37BFF54E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8825C2A-1D76-433C-90C5-9A37BFF54E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8183C81-112D-473F-B5CF-193990D792F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8183C81-112D-473F-B5CF-193990D792F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8183C81-112D-473F-B5CF-193990D792F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8183C81-112D-473F-B5CF-193990D792F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45C29851-3725-49C4-B032-18CB393A6E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C29851-3725-49C4-B032-18CB393A6E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C29851-3725-49C4-B032-18CB393A6E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C29851-3725-49C4-B032-18CB393A6E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Yash.CustomTool.API.Ritesh.props" />
+</Project>
