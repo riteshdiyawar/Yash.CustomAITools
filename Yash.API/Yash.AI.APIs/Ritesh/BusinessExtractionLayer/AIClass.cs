@@ -31,11 +31,13 @@ namespace Yash.BusinessLogicExtractor
             try
             {
                 //"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"
-                var apiKey = "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";
+
+                var R = "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";
+                
                 var endpoint = "https://api.openai.com/v1/chat/completions";
 
                 using var httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", R);
 
                 //var requestBody = new
                 //{
