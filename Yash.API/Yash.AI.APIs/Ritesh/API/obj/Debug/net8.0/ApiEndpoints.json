@@ -1,32 +1,100 @@
 [
   {
-    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
-    "Method": "Get",
-    "RelativePath": "api/YashCustomTool/GetForecastDetails",
+    "ContainingType": "OpenAIDocumentController",
+    "Method": "DownloadGeneratedDoc",
+    "RelativePath": "api/OpenAIDocument/download",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[YashCustomToolRitesh.YashCustomToolController\u002BWeatherForecast, Yash.CustomTool.API.Ritesh, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
-    "Method": "GetProjectDetail",
-    "RelativePath": "api/YashCustomTool/GetProjectDetail",
+    "Method": "DownloadGeneratedWordDoc",
+    "RelativePath": "api/YashCustomTool/DownloadGeneratedWordDoc",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
+    "Method": "GetClassDiagram",
+    "RelativePath": "api/YashCustomTool/GetClassDiagram",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
+    "Method": "GetDatabaseDetailandImprovement",
+    "RelativePath": "api/YashCustomTool/GetDatabaseDetailandImprovement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
+    "Method": "GetProjectDetails",
+    "RelativePath": "api/YashCustomTool/GetProjectDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -36,27 +104,85 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
-    "Method": "GetUser",
-    "RelativePath": "api/YashCustomTool/GetUserData",
+    "Method": "GetProjectDetail",
+    "RelativePath": "api/YashCustomTool/GetProjectFeatureDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
+    "Method": "GetUnitTestGenerator",
+    "RelativePath": "api/YashCustomTool/GetUnitTestGenerator",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
+    "Method": "DownloadWordDocument",
+    "RelativePath": "api/YashCustomTool/SampleDownload",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   }
 ]

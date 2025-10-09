@@ -23,36 +23,33 @@ namespace Yash.BusinessLogicExtractor
         public Message[] messages { get; set; }
     }
 
+
     public class AIClass
     {
+        public string _ProjectPath = "";
+        public string _ProjectTechnologyType = "";
+        public string _ProjectDatabaseConnection = "";
+
+        public AIClass()
+        {
+        }
+        public AIClass(string ProjectPath, string ProjectTechnologyType, string ProjectDatabaseConnection)
+        {
+            _ProjectPath = ProjectPath;
+            _ProjectTechnologyType = ProjectTechnologyType;
+            _ProjectDatabaseConnection = ProjectDatabaseConnection;
+        }
         public async Task<string> consumeAPIAsync(string FileName, RequestBody requestBody)
         {
 
             try
             {
-                //"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"
+                var key = @"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";
 
-                var K = ""; /*@"sk-proj-UsfKrHWDAo5HeypN-gaRP6eFpzquWu-0sy8pz62Y5KME-9_gLs0OziaUQmvRU0Fgy1GydLyQHT3BlbkFJLnoZupaNxpE4aKRrOOIJUoqoAYJ2EdiRoakQ0n3_MV8h5QIKzM5-K8JaAKJNRwHYk_z4JQfqsA";
-*/
                 var endpoint = "https://api.openai.com/v1/chat/completions";
 
                 using var httpClient = new HttpClient();
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", key);
-
-                //var requestBody = new
-                //{
-                //    //model = "gpt-4", // or "gpt-3.5-turbo"
-                //    //model = "gpt-3.5-turbo",
-                //    model = "gpt-4o-mini",
-
-
-                //    messages = new[]
-                //    {
-                //new { role = "system", content = "You are a helpful assistant." },
-                //new { role = "user", content = "Explain business logic summary provided code in C#. "+ Environment.NewLine + Code  },
-                //new { role = "user", content = "Please give only summary." }
-                //    }
-                //};
 
                 var response = await httpClient.PostAsJsonAsync(endpoint, requestBody);
                 var responseContent = await response.Content.ReadAsStringAsync();
@@ -64,42 +61,9 @@ namespace Yash.BusinessLogicExtractor
                                .GetProperty("message")
                                .GetProperty("content")
                                .GetString();
-
+                //var imageUrl = doc.RootElement.GetProperty("image_url");// ("image_url", out var imageElement) ? imageElement.GetString() : null;
                 return reply;
-                //Second Command 
 
-                /*
-
-                                var requestBody2 = new
-                                {
-                                    //model = "gpt-4", // or "gpt-3.5-turbo"
-                                    //model = "gpt-3.5-turbo",
-                                    model = "gpt-4o-mini",
-
-
-                                    messages = new[]
-                                    {
-                                        new { role = "system", content = "You are a helpful assistant." },
-                                        new { role = "user", content = "Please give only summary." }
-                                    }
-                                };
-
-
-                                var response2 = await httpClient.PostAsJsonAsync(endpoint, requestBody2);
-                                var responseContent2 = await response.Content.ReadAsStringAsync();
-
-
-                                using var doc2 = JsonDocument.Parse(responseContent2);
-                                var reply2 = doc2.RootElement
-                                               .GetProperty("choices")[0]
-                                               .GetProperty("message")
-                                               .GetProperty("content")
-                                               .GetString();
-
-
-                                Console.WriteLine("Copilot says:\n" + reply);
-                */
-                //   SaveDocuemnt(reply, FileName);
             }
             catch (Exception ex)
             {
@@ -222,26 +186,41 @@ namespace Yash.BusinessLogicExtractor
                 foreach (var file in configs)
                     Summary = Summary + (" - " + Path.GetFileName(file));
 
-                string Prompt = "Please  generate the Architecture Diagram (Conceptual)  high-level breakdown of  Web Forms project architecture based on the file structure for below content";
+                string Prompt = "generate a high-level conceptual architecture diagram for a Web Forms project. The architecture should be based on the project's file structure, which I will provide";
 
-                //string Prompt =  ("\n Please  generate the Architecture Diagram (Conceptual)  for me in MS word for below content!");
+
 
                 var requestBody = new RequestBody
                 {
-                    model = "gpt-3.5-turbo" , //"gpt-4o-mini",
+                    model = "gpt-4o-mini",
                     messages = new[]
                         {
                             new Message { role = "system", content = "You are a helpful assistant." },
-                            new Message { role = "role", content = Prompt + Environment.NewLine+ Summary  },
+                            new Message { role = "user", content = Prompt + Environment.NewLine+ Summary  },
                             //new Message { role = "user", content = "Please give only summary." }
                             }
                 };
                 // pass to AI 
-                string singleFileSummary = "";
+                string FilesSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody); ;
+
+                //Prompt = "Please convert Sample Conceptual Layout into image ";
+                //requestBody = new RequestBody
+                //{
+                //    model = "gpt-4o-mini",
+                //    messages = new[]
+                //        {
+                //            new Message { role = "system", content = "You are a helpful assistant." },
+                //            new Message { role = "user", content = Prompt + Environment.NewLine+ FilesSummary  },
+                //            //new Message { role = "user", content = "Please give only summary." }
+                //            }
+                //};
+                //// pass to AI 
+                //string output = await aIClass.consumeAPIAsync("projectFileName", requestBody); ;
 
 
-                singleFileSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody);
 
+                // singleFileSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody);
+                return FilesSummary;
             }
             catch (Exception ex)
             {
@@ -252,17 +231,108 @@ namespace Yash.BusinessLogicExtractor
             // generate summary 
 
         }
-        public async Task<string> ProcessCodeFiles(string projectPath)
+
+
+
+
+
+        public async Task<string> GetClassDiagram(string projectPath)
         {
             //read the files 
 
-            string folderPath = projectPath;// "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
+            string folderPath = projectPath;
+            AIClass aIClass = new AIClass();
+            try
+            {
+
+
+                Console.WriteLine("Enter the root path of your ASP.NET project:");
+                string rootPath = projectPath;
+
+                if (!Directory.Exists(rootPath))
+                {
+                    Console.WriteLine("Invalid path.");
+                    return "";
+                }
+
+                string Summary = "";
+                Console.WriteLine("\n📁 Project Structure Summary:\n");
+
+                var aspxPages = Directory.GetFiles(rootPath, "*.aspx", SearchOption.AllDirectories);
+                var codeBehind = Directory.GetFiles(rootPath, "*.aspx.cs", SearchOption.AllDirectories);
+                var classes = Directory.GetFiles(rootPath, "*.cs", SearchOption.AllDirectories)
+                                       .Where(f => !f.EndsWith(".aspx.cs"))
+                                       .ToArray();
+                var configs = Directory.GetFiles(rootPath, "*.config", SearchOption.AllDirectories);
+
+                //Summary = Summary + $"UI Pages (.aspx): {aspxPages.Length}";
+                //foreach (var file in aspxPages)
+                //    Summary = Summary + (" - " + Path.GetFileName(file));
+
+                //Summary = Summary + ($"\nCode-behind (.aspx.cs): {codeBehind.Length}");
+                //foreach (var file in codeBehind)
+                //    Summary = Summary + (" - " + Path.GetFileName(file));
+
+                Summary = Summary + ($"\nBusiness/Data Classes (.cs): {classes.Length}");
+                foreach (var file in classes)
+                    Summary = Summary + (" - " + Path.GetFileName(file));
+
+                //Summary = Summary + ($"\nConfig Files: {configs.Length}");
+                //foreach (var file in configs)
+                //    Summary = Summary + (" - " + Path.GetFileName(file));
+
+                string Prompt = "Please  generate the Class Diagram (Conceptual)  high-level based on the file structure for below content";
+
+                //string Prompt =  ("\n Please  generate the Architecture Diagram (Conceptual)  for me in MS word for below content!");
+
+                var requestBody = new RequestBody
+                {
+                    model = "gpt-4o-mini",
+                    messages = new[]
+                        {
+                            new Message { role = "system", content = "You are a helpful assistant." },
+                            new Message { role = "user", content = Prompt + Environment.NewLine+ Summary  },
+                            //new Message { role = "user", content = "Please give only summary." }
+                            }
+                };
+                // pass to AI 
+                string singleFileSummary = "";
+
+
+                singleFileSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody);
+                return singleFileSummary;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error accessing folder {folderPath}: ex.Message");
+            }
+
+            return "";
+            // generate summary 
+
+        }
+
+        public async Task<string> GetProjectDetails(string projectPath)
+        {
+            //read the files 
+
+           // string folderPath = projectPath;// "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
+            string folderPath =  "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
             AIClass aIClass = new AIClass();
             try
             {
                 // Get all file paths in the folder
                 BusinessLogicExtractor businessLogicExtractor = new BusinessLogicExtractor();
-                string[] filePaths = Directory.GetFiles(folderPath, "*.cs", SearchOption.AllDirectories);
+
+                // string[] filePaths = Directory.GetFiles(folderPath, "*.cs", SearchOption.AllDirectories);
+
+
+                // Get all .cs and .aspx files
+                var filePaths = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
+                                         .Where(file => file.EndsWith(".cs") || file.EndsWith(".aspx"))
+                                         .ToArray();
+
+
                 //string[] filePaths = Directory.GetFiles(folderPath);
                 string allMethodsCodes = "";
                 string ConsolidatefileSummary = "";
@@ -271,35 +341,14 @@ namespace Yash.BusinessLogicExtractor
 
                     try
                     {
-                        string singleFileSummary = "";
 
                         // Read the content of the file
                         string fileContent = File.ReadAllText(filePath);
                         string projectFileName = Path.GetFileName(filePath);
 
-                        allMethodsCodes = businessLogicExtractor.ExtractBusinessMethods(fileContent);
+                        allMethodsCodes = allMethodsCodes + Environment.NewLine + businessLogicExtractor.ExtractBusinessMethods(fileContent);
                         // Process the file content (e.g., print it)
 
-
-
-                        var requestBody = new RequestBody
-                        {
-                            model = "gpt-4o-mini",
-                            messages = new[]
-                         {
-                            new Message { role = "system", content = "You are a helpful assistant." },
-                            new Message { role = "user", content = "Explain business logic summary provided code in C#. " + Environment.NewLine+ allMethodsCodes + "Code" },
-                            new Message { role = "user", content = "Please give only summary." }
-                            }
-                        };
-                        // pass to AI 
-
-
-
-                        singleFileSummary = await aIClass.consumeAPIAsync(projectFileName, requestBody);
-
-                        // combine the result 
-                        ConsolidatefileSummary = singleFileSummary + ConsolidatefileSummary;
                     }
                     catch (Exception ex)
                     {
@@ -308,30 +357,40 @@ namespace Yash.BusinessLogicExtractor
                 }
 
 
-                //                Great! Please upload your ASP.NET Web Forms project files(or a ZIP of the solution folder).Once I have the files, I’ll:
 
-                //                Analyze the structure of your.aspx, .cs, and other relevant files.
-                //Identify key components like UI pages, business logic, data access layers, and configuration.
-                //Generate a clean architecture diagram that visually represents how everything connects.
-
-                // pass combine result
-
-                var requestBody1 = new RequestBody
+                #region "Calling Open AI"
+                var requestBody = new RequestBody
                 {
                     model = "gpt-4o-mini",
                     messages = new[]
-                       {
+                     {
                             new Message { role = "system", content = "You are a helpful assistant." },
-                            new Message { role = "user", content = "do the analysis and provide Project description and Business Logic also"+ConsolidatefileSummary + Environment.NewLine  },
-                            //new Message { role = "user", content = "Please give only summary." }
+                            new Message { role = "user", content =
+                            "Create a detailed description of a Web Forms project based on the contents of its .cs and .aspx files. The description should include the purpose of each UI page, the backend logic, and how different components interact within the architecture."
+                            + Environment.NewLine+ allMethodsCodes  },
+
                             }
                 };
-                // pass to AI 
+
+                string finaloutput = await aIClass.consumeAPIAsync("projectFileName", requestBody);
 
 
-                var finaloutput = await aIClass.consumeAPIAsync(ConsolidatefileSummary, requestBody1);
+                //requestBody = new RequestBody
+                //{
+                //    model = "gpt-4o-mini",
+                //    messages = new[]
+                //     {
+                //            new Message { role = "system", content = "You are a helpful assistant." },
+                //            new Message { role = "user", content = "do the analysis and provide Project description and Business Logic also"+BusinessLogicSummary + Environment.NewLine  },
+                //            //new Message { role = "user", content = "Please give only summary." }
+                //            }
+                //};
+
+                //var finaloutput = await aIClass.consumeAPIAsync(ConsolidatefileSummary, requestBody);
 
                 return finaloutput;
+
+                #endregion
             }
             catch (Exception ex)
             {

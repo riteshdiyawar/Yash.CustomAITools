@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Threading.Tasks;
 using Yash.BusinessLogicExtractor;
 
@@ -41,53 +42,20 @@ namespace YashCustomToolRitesh
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        [HttpGet("GetForecastDetails")]
-        public IEnumerable<WeatherForecast> Get()
+
+
+
+
+
+        [HttpGet("GetClassDiagram")]
+        public async Task<IActionResult> GetClassDiagram
+            (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
 
-            })
-            .ToArray();
-        }
+            string projectLocation = ProjectPath;// _configuration["ProjectLocation"].ToString();
 
-        [HttpGet("GetProjectDetail")]
-        public async Task<IActionResult> GetProjectDetail()
-        {
-            AIClass aIClass = new AIClass();
-
-            string projectLocation = _configuration["ProjectLocation"].ToString();
-
-            var fileContent = await aIClass.ProcessCodeFiles(projectLocation);
-            //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
-
-
-     
-
-            // Convert string to byte array
-            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(fileContent);
-
-            // Set file name and content type
-            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md"; 
-            string contentType = "application/octet-stream";
-
-            return File(fileBytes, contentType, fileName);
-
-            //return null;
-        }
-
-        [HttpGet("GetProjectDiagram")]
-        public async Task<IActionResult> GetProjectDiagram()
-        {
-            AIClass aIClass = new AIClass();
-
-            string projectLocation = _configuration["ProjectLocation"].ToString();
-
-            var fileContent = await aIClass.GetProjectDiagram(projectLocation);
+            var fileContent = await aIClass.GetClassDiagram(projectLocation);
             //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
 
 
@@ -106,49 +74,243 @@ namespace YashCustomToolRitesh
         }
 
 
-
-
-        //[HttpGet("download")]
-        //public IActionResult DownloadFile(string fileName)
-        //{
-        //    // Path to the file
-        //    var filePath = Path.Combine(_env.ContentRootPath, "Files", fileName);
-
-        //    if (!System.IO.File.Exists(filePath))
-        //        return NotFound("File not found.");
-
-        //    var bytes = System.IO.File.ReadAllBytes(filePath);
-        //    var contentType = "application/octet-stream"; // or use MimeTypes if needed
-
-        //    return File(bytes, contentType, fileName);
-        //}
-
-
-        public class WeatherForecast
+        [HttpGet("GetUnitTestGenerator")]
+        public async Task<IActionResult> GetUnitTestGenerator
+             (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
         {
-            public DateTime Date { get; set; }
+            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
 
-            public int TemperatureC { get; set; }
+            string projectLocation = _configuration["ProjectLocation"].ToString();
 
-            public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+            var fileContent = await aIClass.GetProjectDetails(projectLocation);
+            //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
 
-            public string Summary { get; set; }
+
+
+
+            // Convert string to byte array
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(fileContent);
+
+            // Set file name and content type
+            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string contentType = "application/octet-stream";
+
+            return File(fileBytes, contentType, fileName);
+
+            //return null;
         }
 
 
-        [HttpGet("GetUserData")]
-        public List<string> GetUser()
+        [HttpGet("GetProjectDiagram")]
+        public async Task<IActionResult> GetProjectDiagram
+             (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
         {
-            List<string> User = new List<string>();
+            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
 
-            User.Add("Yash");
-            User.Add("Pratik");
-            User.Add("Ankit");
+            string projectLocation = _configuration["ProjectLocation"].ToString();
+
+            var openAiResponse = await aIClass.GetProjectDiagram(projectLocation);
+            //// var openAiResponse = await GetOpenAIResponse(prompt);
+            //if (string.IsNullOrWhiteSpace(openAiResponse))
+            //    return BadRequest("Failed to generate content from OpenAI.");
+
+            //var wordBytes = GenerateWordDocument(openAiResponse);
+
+            //return File(wordBytes,
+            //            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            //            "OpenAI_Generated_Document.docx");
 
 
-            return User;
+            #region MD
+            // Convert string to byte array
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(openAiResponse);
+
+            // Set file name and content type
+            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string contentType = "application/octet-stream";
+
+            return File(fileBytes, contentType, fileName);
+            #endregion
+
         }
+
+        [HttpGet("GetProjectDetails")]
+        public async Task<IActionResult> GetProjectDetails
+            (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
+
+        {
+            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
+
+            string projectLocation = _configuration["ProjectLocation"].ToString();
+
+            var openAiResponse = await aIClass.GetProjectDetails(projectLocation);
+
+            #region Word
+            //// var openAiResponse = await GetOpenAIResponse(prompt);
+            //if (string.IsNullOrWhiteSpace(openAiResponse))
+            //    return BadRequest("Failed to generate content from OpenAI.");
+
+            //var wordBytes = GenerateWordDocument(openAiResponse);
+
+            //return File(wordBytes,
+            //            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            //            "OpenAI_Generated_Document.docx");
+            #endregion
+
+            #region MD
+            // Convert string to byte array
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(openAiResponse);
+
+            // Set file name and content type
+            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string contentType = "application/octet-stream";
+
+            return File(fileBytes, contentType, fileName);
+            #endregion
+
+
+
+
+        }
+
+
+
+        [HttpGet("GetProjectFeatureDetail")]
+        public async Task<IActionResult> GetProjectDetail(string ProjectPath, string ProjectTechnologyType, string DatabaseConnection)
+        {
+            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
+
+            string projectLocation = _configuration["ProjectLocation"].ToString();
+
+            var fileContent = await aIClass.GetProjectDetails(projectLocation);
+            //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
+
+
+
+
+            // Convert string to byte array
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(fileContent);
+
+            // Set file name and content type
+            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string contentType = "application/octet-stream";
+
+            return File(fileBytes, contentType, fileName);
+
+            //return null;
+        }
+
+        [HttpGet("GetDatabaseDetailandImprovement")]
+        public async Task<IActionResult> GetDatabaseDetailandImprovement
+            (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
+
+        {
+            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
+
+            string projectLocation = _configuration["ProjectLocation"].ToString();
+
+            var fileContent = await aIClass.GetProjectDetails(projectLocation);
+            //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
+
+
+
+
+            // Convert string to byte array
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(fileContent);
+
+            // Set file name and content type
+            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string contentType = "application/octet-stream";
+
+            return File(fileBytes, contentType, fileName);
+
+            //return null;
+        }
+
+
+        #region "Sample"
+        [HttpGet("SampleDownload")]
+        public IActionResult DownloadWordDocument()
+        {
+            var fileName = "SampleDocument.docx";
+
+            var fileBytes = System.Text.Encoding.UTF8.GetBytes("System.IO.File.ReadAllBytes(filePath);");
+            return File(fileBytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", fileName);
+        }
+
+
+        [HttpGet("DownloadGeneratedWordDoc")]
+        public IActionResult DownloadGeneratedWordDoc()
+        {
+            byte[] wordBytes;
+
+            using (var memStream = new MemoryStream())
+            {
+                using (var wordDoc = WordprocessingDocument.Create(memStream, DocumentFormat.OpenXml.WordprocessingDocumentType.Document, true))
+                {
+                    var mainPart = wordDoc.AddMainDocumentPart();
+                    mainPart.Document = new Document();
+                    var body = new Body();
+
+                    // Add content
+                    body.Append(new Paragraph(new Run(new Text("Hello Ritesh, this is your generated Word document!"))));
+                    body.Append(new Paragraph(new Run(new Text("Generated on: " + DateTime.Now.ToString("f")))));
+
+                    mainPart.Document.Append(body);
+                    mainPart.Document.Save();
+                }
+
+                wordBytes = memStream.ToArray();
+            }
+
+            return File(wordBytes,
+                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                        "GeneratedDocument.docx");
+        }
+
+        #endregion
+
+        #region Private Method
+        private byte[] GenerateWordDocument(string content)
+        {
+            using var memStream = new MemoryStream();
+            using (var wordDoc = WordprocessingDocument.Create(memStream, DocumentFormat.OpenXml.WordprocessingDocumentType.Document, true))
+            {
+                var mainPart = wordDoc.AddMainDocumentPart();
+                mainPart.Document = new Document();
+                var body = new Body();
+
+                foreach (var line in content.Split('\n'))
+                {
+                    body.Append(new Paragraph(new Run(new Text(line.Trim()))));
+                }
+
+                mainPart.Document.Append(body);
+                mainPart.Document.Save();
+            }
+
+            return memStream.ToArray();
+        }
+
+        #endregion
+
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
