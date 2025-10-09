@@ -1,16 +1,11 @@
-﻿
-
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Security.Authentication;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 using Yash.BusinessLogicExtractor;
 
 namespace YashCustomToolRitesh
@@ -84,6 +79,33 @@ namespace YashCustomToolRitesh
 
             //return null;
         }
+
+        [HttpGet("GetProjectDiagram")]
+        public async Task<IActionResult> GetProjectDiagram()
+        {
+            AIClass aIClass = new AIClass();
+
+            string projectLocation = _configuration["ProjectLocation"].ToString();
+
+            var fileContent = await aIClass.GetProjectDiagram(projectLocation);
+            //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
+
+
+
+
+            // Convert string to byte array
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(fileContent);
+
+            // Set file name and content type
+            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string contentType = "application/octet-stream";
+
+            return File(fileBytes, contentType, fileName);
+
+            //return null;
+        }
+
+
 
 
         //[HttpGet("download")]

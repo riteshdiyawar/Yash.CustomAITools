@@ -41,9 +41,6 @@
     <Reference Include="System.Net.Http.Formatting">
       <HintPath>ExternalDLL\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
-    <Reference Include="Yash.BusinessExtractionLayer">
-      <HintPath>..\BusinessExtractionLayer\bin\Debug\net8.0\Yash.BusinessExtractionLayer.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 

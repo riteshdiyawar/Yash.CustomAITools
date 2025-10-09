@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Yash.BusinessExtractionLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9c10f47f3d73469f3379eb0f5ab8df412238022")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bc1c395c33c5c57d4ada89b5ea0da5f096df5df")]
 [assembly: System.Reflection.AssemblyProductAttribute("Yash.BusinessExtractionLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Yash.BusinessExtractionLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

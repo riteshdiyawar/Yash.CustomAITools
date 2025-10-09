@@ -27,8 +27,7 @@
           "System.Net.Http.Json": "9.0.9",
           "System.Security.Claims": "4.3.0",
           "System.Text.Json": "9.0.9",
-          "System.Net.Http.Formatting": "6.0.0.0",
-          "Yash.BusinessExtractionLayer": "1.0.0.0"
+          "System.Net.Http.Formatting": "6.0.0.0"
         },
         "runtime": {
           "Yash.CustomTool.API.Ritesh.dll": {}
@@ -1625,14 +1624,6 @@
             "fileVersion": "6.0.61130.707"
           }
         }
-      },
-      "Yash.BusinessExtractionLayer/1.0.0.0": {
-        "runtime": {
-          "Yash.BusinessExtractionLayer.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -2651,11 +2642,6 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "System.Net.Http.Formatting/6.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Yash.BusinessExtractionLayer/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

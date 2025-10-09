@@ -31,6 +31,16 @@
   },
   {
     "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
+    "Method": "GetProjectDiagram",
+    "RelativePath": "api/YashCustomTool/GetProjectDiagram",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
     "Method": "GetUser",
     "RelativePath": "api/YashCustomTool/GetUserData",
     "HttpMethod": "GET",
