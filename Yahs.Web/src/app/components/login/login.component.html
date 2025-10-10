@@ -1,0 +1,43 @@
+<div class="login-page">
+  <mat-card class="login-card">
+    <div class="logo-section">
+      <h1>Yash Technologies</h1>
+      <p class="subtitle">Welcome back! Please login to continue.</p>
+    </div>
+
+    <form (ngSubmit)="onLogin()" class="login-form">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]="username" name="username" required />
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          [type]="hidePassword ? 'password' : 'text'"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="hidePassword = !hidePassword"
+        >
+          <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="login-btn" type="submit">
+        Login
+      </button>
+    </form>
+
+    <div class="footer-text">
+      <p>&copy; Copyright © 2025. YASH Technologies. All Rights Reserved.</p>
+    </div>
+  </mat-card>
+</div>

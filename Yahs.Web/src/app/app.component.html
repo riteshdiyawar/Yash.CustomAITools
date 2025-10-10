@@ -1,0 +1,18 @@
+<div class="app-container">
+  <mat-progress-bar *ngIf="isLoading | async" mode="indeterminate" color="primary" style="position:fixed;top:0;left:0;width:100vw;z-index:2000;"></mat-progress-bar>
+  <!-- Shell (navbar + footer) shown only when showShell === true -->
+  <ng-container *ngIf="showShell; else minimalLayout">
+    <app-navbar></app-navbar>
+
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+
+    <app-footer></app-footer>
+  </ng-container>
+
+  <!-- Minimal layout (login-only pages) -->
+  <ng-template #minimalLayout>
+    <router-outlet></router-outlet>
+  </ng-template>
+</div>

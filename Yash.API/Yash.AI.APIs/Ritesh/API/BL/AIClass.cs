@@ -44,12 +44,12 @@ namespace Yash.BusinessLogicExtractor
 
             try
             {
-                var key = @"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";
 
+                string s = "";
                 var endpoint = "https://api.openai.com/v1/chat/completions";
 
                 using var httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", key);
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", s);
 
                 var response = await httpClient.PostAsJsonAsync(endpoint, requestBody);
                 var responseContent = await response.Content.ReadAsStringAsync();
@@ -141,7 +141,7 @@ namespace Yash.BusinessLogicExtractor
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
-        public async Task<string> GetProjectDiagram(string projectPath)
+        public async Task<string> GetProjectDiagram(string projectPath,string TechnologyType)
         {
             //read the files 
 
@@ -160,35 +160,37 @@ namespace Yash.BusinessLogicExtractor
                     return "";
                 }
 
-                string Summary = "";
+                string Summary = "Please select the Proper Technology";
                 Console.WriteLine("\n📁 Project Structure Summary:\n");
 
-                var aspxPages = Directory.GetFiles(rootPath, "*.aspx", SearchOption.AllDirectories);
-                var codeBehind = Directory.GetFiles(rootPath, "*.aspx.cs", SearchOption.AllDirectories);
-                var classes = Directory.GetFiles(rootPath, "*.cs", SearchOption.AllDirectories)
-                                       .Where(f => !f.EndsWith(".aspx.cs"))
-                                       .ToArray();
-                var configs = Directory.GetFiles(rootPath, "*.config", SearchOption.AllDirectories);
+                if (TechnologyType.ToLower() == "AspxNet".ToLower())
+                {
+                    Summary = "";
+                    var aspxPages = Directory.GetFiles(rootPath, "*.aspx", SearchOption.AllDirectories);
+                    var codeBehind = Directory.GetFiles(rootPath, "*.aspx.cs", SearchOption.AllDirectories);
+                    var classes = Directory.GetFiles(rootPath, "*.cs", SearchOption.AllDirectories)
+                                           .Where(f => !f.EndsWith(".aspx.cs"))
+                                           .ToArray();
+                    var configs = Directory.GetFiles(rootPath, "*.config", SearchOption.AllDirectories);
 
-                Summary = Summary + $"UI Pages (.aspx): {aspxPages.Length}";
-                foreach (var file in aspxPages)
-                    Summary = Summary + (" - " + Path.GetFileName(file));
+                    Summary = Summary + $"UI Pages (.aspx): {aspxPages.Length}";
+                    foreach (var file in aspxPages)
+                        Summary = Summary + (" - " + Path.GetFileName(file));
 
-                Summary = Summary + ($"\nCode-behind (.aspx.cs): {codeBehind.Length}");
-                foreach (var file in codeBehind)
-                    Summary = Summary + (" - " + Path.GetFileName(file));
+                    Summary = Summary + ($"\nCode-behind (.aspx.cs): {codeBehind.Length}");
+                    foreach (var file in codeBehind)
+                        Summary = Summary + (" - " + Path.GetFileName(file));
 
-                Summary = Summary + ($"\nBusiness/Data Classes (.cs): {classes.Length}");
-                foreach (var file in classes)
-                    Summary = Summary + (" - " + Path.GetFileName(file));
+                    Summary = Summary + ($"\nBusiness/Data Classes (.cs): {classes.Length}");
+                    foreach (var file in classes)
+                        Summary = Summary + (" - " + Path.GetFileName(file));
 
-                Summary = Summary + ($"\nConfig Files: {configs.Length}");
-                foreach (var file in configs)
-                    Summary = Summary + (" - " + Path.GetFileName(file));
+                    Summary = Summary + ($"\nConfig Files: {configs.Length}");
+                    foreach (var file in configs)
+                        Summary = Summary + (" - " + Path.GetFileName(file));
+                }
 
-                string Prompt = "generate a high-level conceptual architecture diagram for a Web Forms project. The architecture should be based on the project's file structure, which I will provide";
-
-
+                string Prompt = "I am Software Architect, i want to generate high-level conceptual architecture diagram for a Web Forms project.Based on the data";
 
                 var requestBody = new RequestBody
                 {
@@ -203,23 +205,7 @@ namespace Yash.BusinessLogicExtractor
                 // pass to AI 
                 string FilesSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody); ;
 
-                //Prompt = "Please convert Sample Conceptual Layout into image ";
-                //requestBody = new RequestBody
-                //{
-                //    model = "gpt-4o-mini",
-                //    messages = new[]
-                //        {
-                //            new Message { role = "system", content = "You are a helpful assistant." },
-                //            new Message { role = "user", content = Prompt + Environment.NewLine+ FilesSummary  },
-                //            //new Message { role = "user", content = "Please give only summary." }
-                //            }
-                //};
-                //// pass to AI 
-                //string output = await aIClass.consumeAPIAsync("projectFileName", requestBody); ;
-
-
-
-                // singleFileSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody);
+               
                 return FilesSummary;
             }
             catch (Exception ex)

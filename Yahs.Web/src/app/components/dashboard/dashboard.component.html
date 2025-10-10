@@ -1,0 +1,65 @@
+<div class="dashboard-container">
+ 
+ 
+  <div class="dashboard">
+<a href="\project-detail" style="text-decoration: none;">
+    <div class="tile" style="background-color: #007bff;">
+      <i class="fas fa-users tile-icon"></i>
+      <div class="tile-content">
+        <h4>Project Detail</h4>
+        <h2>2</h2>
+      </div>
+      </div>
+    </a>
+    </div>
+
+
+  <!-- Tiles Section -->
+   <div class="table-section">
+  <div class="tiles-grid">
+    <mat-card class="tile-card"
+      *ngFor="let tile of tiles; let i = index"
+      [ngStyle]="{ 'background': tile.color }"
+       (click)="onTileClick(i)">
+      <div class="tile-header">
+        <span class="tile-label">{{ tile.label }}</span>
+        <mat-icon class="tile-icon">{{ tile.icon }}</mat-icon>
+      </div>
+      <hr class="tile-divider" />
+      <div class="tile-count">{{ tile.count }}</div>
+    </mat-card>
+  </div>
+   
+</div>
+  <!-- Table and Chart Section in a single row  -->
+  <div class="table-chart-grid">
+    <div class="table-section">
+      <h3>Users List</h3>
+      <table mat-table [dataSource]="tableData" class="mat-elevation-z2 styled-table">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+        </ng-container>
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef>Date</th>
+          <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    <div class="chart-section">
+      <h3>Transactions This Week</h3>
+      <canvas id="barChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+</div>

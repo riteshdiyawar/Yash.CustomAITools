@@ -1,0 +1,38 @@
+ 
+
+<!-- app.component.html -->
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="projectPath">Project Path</label>
+      <input type="text" id="projectPath" class="form-control" placeholder="Text box" [(ngModel)]="projectPath" name="projectPath">
+    </div>
+
+    <div class="form-group">
+      <label for="databaseConnection">Database Connection/Path</label>
+      <input type="text" id="databaseConnection" class="form-control" placeholder="Text box" [(ngModel)]="databaseConnection" name="databaseConnection">
+    </div>
+
+    <div class="form-group">
+      <label for="projectTechnology">Project Technology</label>
+      <select id="projectTechnology" class="form-control" [(ngModel)]="projectTechnology" name="projectTechnology">
+        <option value="AspxNet">Aspx.net</option>
+           <option value="aspnetmvc">MVC</option>
+        <option value="angular">Angular</option>
+        <option value="WebAPI">WebAPI</option>
+             <option value="asp">asp</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+
+    <!-- Action Buttons -->
+    
+
+
+  </form>
+<button type="button" class="btn btn-primary button-spacing" (click)="generateProjectDiagram()">Generate Project Diagram</button>
+ <button type="button" class="btn btn-primary button-spacing" (click)="generateClassDiagram()">Generate Class Diagram</button>
+<button type="button" class="btn btn-primary button-spacing" (click)="generateUnitTest()">Generate Unit Test</button>
+<button type="button" class="btn btn-primary button-spacing" (click)="generateDatabaseState()">Generate Database State</button>
+<button type="button" class="btn btn-primary" (click)="generateFeatureAndPage()">Generate Feature and Page</button>
+</div>

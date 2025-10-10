@@ -1,0 +1,23 @@
+<div class="tile-details-card" *ngIf="tile; else notFound">
+  <h2 class="tile-details-title">{{ tile.label }}</h2>
+  <div class="tile-details-count">Count: <strong>{{ tile.count }}</strong></div>
+  <p class="tile-details-desc">{{ tile.description }}</p>
+  <div class="tile-details-meta">
+    <span class="tile-details-meta-item">Status: <b>{{ tile.status }}</b></span>
+    <span class="tile-details-meta-item">Created: <b>{{ tile.created }}</b></span>
+    <span class="tile-details-meta-item">Owner: <b>{{ tile.owner }}</b></span>
+  </div>
+  <hr class="tile-details-divider" />
+  <ul class="tile-details-list">
+    <li *ngFor="let detail of tile.details">
+      <span class="tile-details-list-label">{{ detail.label }}:</span>
+      <span class="tile-details-list-value">{{ detail.value }}</span>
+    </li>
+  </ul>
+</div>
+<ng-template #notFound>
+  <div class="tile-details-card">
+    <h2>Tile Not Found</h2>
+    <p>No details available for this tile.</p>
+  </div>
+</ng-template>

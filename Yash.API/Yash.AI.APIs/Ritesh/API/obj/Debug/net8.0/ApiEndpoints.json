@@ -184,5 +184,31 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
+    "Method": "SampleMDFileDownload",
+    "RelativePath": "api/YashCustomTool/SampleMDFileDownload",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

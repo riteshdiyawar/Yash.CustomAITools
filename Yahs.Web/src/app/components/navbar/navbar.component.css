@@ -1,0 +1,55 @@
+/* Compact toolbar with gradient */
+.app-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 60px; /* reduced height */
+  min-height: 50px;
+  background: linear-gradient(135deg, #2196f3, #9c27b0); /* match login theme */
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.app-logo {
+  font-size: 1.2rem; /* slightly smaller */
+  font-weight: 600;
+  color: white;
+  /* height: 60px; */
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-links a {
+  font-size: 0.9rem; /* smaller font */
+  font-weight: 500;
+  margin: 0 0.25rem;
+  color: white;
+  text-transform: none;
+  transition: all 0.2s ease;
+  line-height: 50px; /* vertically center */
+  padding: 0 8px;
+  border-radius: 6px;
+}
+
+/* Hover style */
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* subtle highlight */
+  color: #ffd700; /* accent color on hover */
+}
+
+.nav-links a.active-link {
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+.profile-btn {
+  margin-left: 0.5rem;
+  color: white;
+}
+
+mat-icon {
+  vertical-align: middle;
+  font-size: 24px;
+}

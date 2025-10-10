@@ -103,22 +103,14 @@ namespace YashCustomToolRitesh
 
         [HttpGet("GetProjectDiagram")]
         public async Task<IActionResult> GetProjectDiagram
-             (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
+             (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPXNET", string DatabaseConnection = "")
         {
             AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
 
-            string projectLocation = _configuration["ProjectLocation"].ToString();
+            //string projectLocation = _configuration["ProjectLocation"].ToString();
 
-            var openAiResponse = await aIClass.GetProjectDiagram(projectLocation);
-            //// var openAiResponse = await GetOpenAIResponse(prompt);
-            //if (string.IsNullOrWhiteSpace(openAiResponse))
-            //    return BadRequest("Failed to generate content from OpenAI.");
-
-            //var wordBytes = GenerateWordDocument(openAiResponse);
-
-            //return File(wordBytes,
-            //            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            //            "OpenAI_Generated_Document.docx");
+            var openAiResponse = await aIClass.GetProjectDiagram(ProjectPath, ProjectTechnologyType);
+     
 
 
             #region MD
@@ -126,7 +118,7 @@ namespace YashCustomToolRitesh
             byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(openAiResponse);
 
             // Set file name and content type
-            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string fileName = "Yash_CustomTools_ProjectDiagram_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
             string contentType = "application/octet-stream";
 
             return File(fileBytes, contentType, fileName);
@@ -229,6 +221,21 @@ namespace YashCustomToolRitesh
 
 
         #region "Sample"
+
+        [HttpGet("SampleMDFileDownload")]
+        public IActionResult SampleMDFileDownload(string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
+        {
+
+
+            // Convert string to byte array
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes("fileContent");
+
+            // Set file name and content type
+            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string contentType = "application/octet-stream";
+
+            return File(fileBytes, contentType, fileName);
+        }
         [HttpGet("SampleDownload")]
         public IActionResult DownloadWordDocument()
         {

@@ -1,0 +1,101 @@
+/* Full-page background with soft modern gradient */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2196f3, #9c27b0); /* Blue → Purple */
+}
+
+/* Compact login card */
+.login-card {
+  width: 30%;              /* smaller card */
+  max-width: 320px;        /* limit size */
+  min-width: 240px;        /* keep readability */
+  padding: 1rem;           /* tighter padding */
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;             /* reduced spacing */
+}
+
+/* Logo & welcome text */
+.logo-section h1 {
+  text-align: center;
+  color: #2196f3;
+  font-weight: 600;
+  font-size: 1.3rem; /* smaller heading */
+  margin-bottom: 0.2rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.75rem; /* smaller subtitle */
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+/* Form fields styling */
+.full-width {
+  width: 100%;
+  font-size: 0.8rem; /* smaller input text */
+}
+
+mat-form-field {
+  font-size: 0.8rem; /* shrink material field font */
+}
+
+/* Compact login button */
+.login-btn {
+  width: 100%;
+  height: 40px;             /* smaller height */
+  font-weight: 600;
+  font-size: 0.85rem;       /* reduced font */
+  border-radius: 20px;
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, #1e88e5, #42a5f5);
+  color: #fff !important;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(30, 136, 229, 0.3);
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #1565c0, #2196f3);
+  box-shadow: 0 5px 12px rgba(30, 136, 229, 0.45);
+  transform: translateY(-2px);
+}
+
+.login-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(30, 136, 229, 0.35);
+}
+
+/* Footer text */
+.footer-text {
+  text-align: center;
+  font-size: 0.7rem; /* smaller footer */
+  color: #777;
+  margin-top: 0.6rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-card {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .logo-section h1 {
+    font-size: 1.1rem;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+  }
+}
