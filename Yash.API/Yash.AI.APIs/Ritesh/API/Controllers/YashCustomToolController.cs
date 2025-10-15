@@ -43,6 +43,7 @@ namespace YashCustomToolRitesh
         };
 
 
+        #region Ritesh
         [HttpGet("GetCodeImprovement")]
         public async Task<IActionResult> GetCodeImprovement
             (string ProjectPath = "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode", string ProjectTechnologyType = "ASPXNET", string DatabaseConnection = "")
@@ -68,73 +69,16 @@ namespace YashCustomToolRitesh
 
         }
 
-
-
-
-        [HttpGet("GetClassDiagram")]
-        public async Task<IActionResult> GetClassDiagram
-            (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
-        {
-            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
-
-            string projectLocation = ProjectPath;// _configuration["ProjectLocation"].ToString();
-
-            var fileContent = await aIClass.GetClassDiagram(projectLocation);
-            //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
-
-
-
-
-            // Convert string to byte array
-            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(fileContent);
-
-            // Set file name and content type
-            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
-            string contentType = "application/octet-stream";
-
-            return File(fileBytes, contentType, fileName);
-
-            //return null;
-        }
-
-
-        [HttpGet("GetUnitTestGenerator")]
-        public async Task<IActionResult> GetUnitTestGenerator
-             (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
-        {
-            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
-
-            string projectLocation = _configuration["ProjectLocation"].ToString();
-
-            var fileContent = await aIClass.GetProjectDetails(projectLocation);
-            //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
-
-
-
-
-            // Convert string to byte array
-            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(fileContent);
-
-            // Set file name and content type
-            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
-            string contentType = "application/octet-stream";
-
-            return File(fileBytes, contentType, fileName);
-
-            //return null;
-        }
-
-
         [HttpGet("GetProjectDiagram")]
         public async Task<IActionResult> GetProjectDiagram
-             (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPXNET", string DatabaseConnection = "")
+         (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPXNET", string DatabaseConnection = "")
         {
             AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
 
             //string projectLocation = _configuration["ProjectLocation"].ToString();
 
             var openAiResponse = await aIClass.GetProjectDiagram(ProjectPath, ProjectTechnologyType);
-     
+
 
 
             #region MD
@@ -198,7 +142,7 @@ namespace YashCustomToolRitesh
 
             string projectLocation = _configuration["ProjectLocation"].ToString();
 
-            var fileContent = await aIClass.GetProjectDetails(projectLocation);
+            var fileContent = await aIClass.GetProjectFeatureDetail(projectLocation);
             //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
 
 
@@ -216,16 +160,49 @@ namespace YashCustomToolRitesh
             //return null;
         }
 
-        [HttpGet("GetDatabaseDetailandImprovement")]
-        public async Task<IActionResult> GetDatabaseDetailandImprovement
-            (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
+      
+        
 
+        #endregion
+
+        #region Praveen
+
+        [HttpGet("GetClassDiagram")]
+        public async Task<IActionResult> GetClassDiagram
+            (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
+        {
+            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
+
+            string projectLocation = ProjectPath;// _configuration["ProjectLocation"].ToString();
+
+            var fileContent = await aIClass.GetClassDiagram(projectLocation);
+            //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
+
+
+
+
+            // Convert string to byte array
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(fileContent);
+
+            // Set file name and content type
+            string fileName = "Yash_CustomTools_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string contentType = "application/octet-stream";
+
+            return File(fileBytes, contentType, fileName);
+
+            //return null;
+        }
+
+
+        [HttpGet("GetUnitTestGenerator")]
+        public async Task<IActionResult> GetUnitTestGenerator
+             (string ProjectPath = "E:\\Project Applied\\Anchor.SuretyPortal", string ProjectTechnologyType = "ASPX.NET", string DatabaseConnection = "")
         {
             AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
 
             string projectLocation = _configuration["ProjectLocation"].ToString();
 
-            var fileContent = await aIClass.GetProjectDetails(projectLocation);
+            var fileContent = await aIClass.GetUnitTestGenerator(projectLocation);
             //aIClass.SaveDocuemnt(FileContent, "YashCustomTool_");
 
 
@@ -243,6 +220,7 @@ namespace YashCustomToolRitesh
             //return null;
         }
 
+        #endregion
 
         #region "Sample"
 
