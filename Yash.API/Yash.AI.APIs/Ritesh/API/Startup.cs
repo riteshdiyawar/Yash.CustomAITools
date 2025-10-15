@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.IO;
 using System.Text;
+using Yash.CustomTool.API.Ritesh.Service;
 
 namespace YashCustomToolRitesh
 {
@@ -62,10 +63,11 @@ namespace YashCustomToolRitesh
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
+            services.AddHttpClient<GeminiService>();
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CFM Identity API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Yash Custom Tool API", Version = "v1" });
             });
 
             services.Configure<AppSettings>(Configuration.GetSection("ConfigSettings"));

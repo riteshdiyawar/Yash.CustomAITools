@@ -1,5 +1,78 @@
 [
   {
+    "ContainingType": "Yash.CustomTool.API.Ritesh.Controllers.ChatController",
+    "Method": "GetCodeImprovement",
+    "RelativePath": "api/Chat/GetCodeImprovement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Yash.CustomTool.API.Ritesh.Controllers.ChatController",
+    "Method": "GetCodeImprovementDetail",
+    "RelativePath": "api/Chat/GetCodeImprovementDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "MethodName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Yash.CustomTool.API.Ritesh.Controllers.ChatController",
+    "Method": "GetProjectDiagram",
+    "RelativePath": "api/Chat/GetProjectDiagram",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OpenAIDocumentController",
     "Method": "DownloadGeneratedDoc",
     "RelativePath": "api/OpenAIDocument/download",
@@ -23,6 +96,32 @@
     "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
     "Method": "GetClassDiagram",
     "RelativePath": "api/YashCustomTool/GetClassDiagram",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectTechnologyType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatabaseConnection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
+    "Method": "GetCodeImprovement",
+    "RelativePath": "api/YashCustomTool/GetCodeImprovement",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -43,6 +43,30 @@ namespace YashCustomToolRitesh
         };
 
 
+        [HttpGet("GetCodeImprovement")]
+        public async Task<IActionResult> GetCodeImprovement
+            (string ProjectPath = "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode", string ProjectTechnologyType = "ASPXNET", string DatabaseConnection = "")
+        {
+            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
+
+            //string projectLocation = _configuration["ProjectLocation"].ToString();
+
+            var openAiResponse = await aIClass.GetCodeImprovement(ProjectPath, ProjectTechnologyType);
+
+
+
+            #region MD
+            // Convert string to byte array
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(openAiResponse);
+
+            // Set file name and content type
+            string fileName = "Yash_CustomTools_CodeImprovement_Result_" + DateTime.Now.ToString("yyyyMMdd") + ".md";
+            string contentType = "application/octet-stream";
+
+            return File(fileBytes, contentType, fileName);
+            #endregion
+
+        }
 
 
 

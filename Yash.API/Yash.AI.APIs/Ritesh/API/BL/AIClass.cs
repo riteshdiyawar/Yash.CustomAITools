@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Formats.Asn1;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -6,6 +8,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
+using YashCustomToolRitesh;
 
 namespace Yash.BusinessLogicExtractor
 {
@@ -29,6 +32,7 @@ namespace Yash.BusinessLogicExtractor
         public string _ProjectPath = "";
         public string _ProjectTechnologyType = "";
         public string _ProjectDatabaseConnection = "";
+        private IEnumerable<string> filePaths;
 
         public AIClass()
         {
@@ -41,36 +45,38 @@ namespace Yash.BusinessLogicExtractor
         }
         public async Task<string> consumeAPIAsync(string FileName, RequestBody requestBody)
         {
-
+            string responseString = "";
+            string responseContent = "";
             try
             {
 
-                string s = "";
+                var key = @"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";
                 var endpoint = "https://api.openai.com/v1/chat/completions";
 
                 using var httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", s);
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", key);
 
                 var response = await httpClient.PostAsJsonAsync(endpoint, requestBody);
-                var responseContent = await response.Content.ReadAsStringAsync();
+                responseContent = await response.Content.ReadAsStringAsync();
 
 
                 using var doc = JsonDocument.Parse(responseContent);
-                var reply = doc.RootElement
-                               .GetProperty("choices")[0]
-                               .GetProperty("message")
-                               .GetProperty("content")
-                               .GetString();
+                responseString = doc.RootElement
+                             .GetProperty("choices")[0]
+                             .GetProperty("message")
+                             .GetProperty("content")
+                             .GetString();
                 //var imageUrl = doc.RootElement.GetProperty("image_url");// ("image_url", out var imageElement) ? imageElement.GetString() : null;
-                return reply;
+                return responseString;
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
+                responseString = responseContent + ex.ToString();
             }
 
-            return "";
+            return responseString;
         }
 
         public void SaveDocuemnt(string Content = "TEST", string FileName = "TEST", string FileType = "MD")
@@ -141,7 +147,7 @@ namespace Yash.BusinessLogicExtractor
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
-        public async Task<string> GetProjectDiagram(string projectPath,string TechnologyType)
+        public async Task<string> GetProjectDiagram(string projectPath, string TechnologyType)
         {
             //read the files 
 
@@ -205,7 +211,7 @@ namespace Yash.BusinessLogicExtractor
                 // pass to AI 
                 string FilesSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody); ;
 
-               
+
                 return FilesSummary;
             }
             catch (Exception ex)
@@ -218,7 +224,78 @@ namespace Yash.BusinessLogicExtractor
 
         }
 
+        public async Task<string> GetCodeImprovement(string projectPath, string TechnologyType)
+        {
+            string FilesSummary = "";
+            string folderPath = projectPath;// "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
+            AIClass aIClass = new AIClass();
+            try
+            {
 
+
+                // Get all file paths in the folder
+                CodeExtractor businessLogicExtractor = new CodeExtractor();
+
+                if (TechnologyType.ToLower() == "AspxNet".ToLower())
+                {
+
+                    // Get all .cs and .aspx files
+                    filePaths = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
+                                       .Where(file => file.EndsWith(".cs") || file.EndsWith(".aspx"))
+                                       .ToArray();
+                }
+
+                //string[] filePaths = Directory.GetFiles(folderPath);
+                string allMethodsCodes = "";
+                string ConsolidatefileSummary = "";
+                foreach (string filePath in filePaths)
+                {
+
+                    try
+                    {
+
+                        // Read the content of the file
+                        string fileContent = File.ReadAllText(filePath);
+                        string projectFileName = Path.GetFileName(filePath);
+
+                        allMethodsCodes = allMethodsCodes + Environment.NewLine + businessLogicExtractor.ExtractBusinessMethods(fileContent);
+                        // Process the file content (e.g., print it)
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error reading file {filePath}: {ex.Message}");
+                    }
+                }
+
+
+
+                #region "Calling Open AI"
+                string Prompt = "Summarize key method-level improvements in the code briefly.";
+
+                var requestBody = new RequestBody
+                {
+                    model = "gpt-4o-mini",
+                    messages = new[]
+                        {
+                            new Message { role = "system", content = "You are a helpful assistant." },
+                            new Message { role = "user", content = Prompt + Environment.NewLine+ allMethodsCodes  },
+                            //new Message { role = "user", content = "Please give only summary." }
+                            }
+                };
+                // pass to AI 
+                FilesSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody); ;
+
+
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                FilesSummary = ex.ToString();
+            }
+
+            return FilesSummary;
+        }
 
 
 
@@ -302,17 +379,13 @@ namespace Yash.BusinessLogicExtractor
         {
             //read the files 
 
-           // string folderPath = projectPath;// "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
-            string folderPath =  "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
+            // string folderPath = projectPath;// "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
+            string folderPath = projectPath;// "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
             AIClass aIClass = new AIClass();
             try
             {
                 // Get all file paths in the folder
-                BusinessLogicExtractor businessLogicExtractor = new BusinessLogicExtractor();
-
-                // string[] filePaths = Directory.GetFiles(folderPath, "*.cs", SearchOption.AllDirectories);
-
-
+                CodeExtractor businessLogicExtractor = new CodeExtractor();
                 // Get all .cs and .aspx files
                 var filePaths = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
                                          .Where(file => file.EndsWith(".cs") || file.EndsWith(".aspx"))
