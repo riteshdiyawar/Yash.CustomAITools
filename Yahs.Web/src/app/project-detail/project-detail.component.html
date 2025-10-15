@@ -8,7 +8,7 @@
       <input type="text" id="projectPath" class="form-control" placeholder="Text box" [(ngModel)]="projectPath" name="projectPath">
     </div>
 
-    <div class="form-group">
+    <div class="form-group" style="display: none;">
       <label for="databaseConnection">Database Connection/Path</label>
       <input type="text" id="databaseConnection" class="form-control" placeholder="Text box" [(ngModel)]="databaseConnection" name="databaseConnection">
     </div>
@@ -16,23 +16,82 @@
     <div class="form-group">
       <label for="projectTechnology">Project Technology</label>
       <select id="projectTechnology" class="form-control" [(ngModel)]="projectTechnology" name="projectTechnology">
+        <option value="" disabled selected>Select</option>
         <option value="AspxNet">Aspx.net</option>
-           <option value="aspnetmvc">MVC</option>
+        <option value="aspnetmvc">MVC</option>
         <option value="angular">Angular</option>
         <option value="WebAPI">WebAPI</option>
-             <option value="asp">asp</option>
+        <option value="asp">asp</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="feature">Feature</label>
+      <select id="feature" class="form-control" [(ngModel)]="feature" name="feature">
+        <option value="" disabled selected>Select</option>
+        <option value="ShowCodeImprovements">Show Code Improvements</option>
+        <option value="GenerateProjectDiagram">Generate Project Diagram</option>
+        <option value="GenerateProjectDetail">Generate Project Detail</option>
+        <option value="GenerateClassDiagram">Generate Class Diagram</option>
+        <option value="GenerateUnitTest">Generate Unit Test</option>
+        <option value="GenerateFeatureandPage">Show Page Feature </option>
         <!-- Add more options as needed -->
       </select>
     </div>
 
     <!-- Action Buttons -->
+     <button type="button" class="btn btn-primary button-spacing" (click)="genrateSummary()">Show Result</button>
     
+    <!-- GRID  -->
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" multiTemplateDataRows>
+
+
+  <ng-container matColumnDef="methodName">
+    <th mat-header-cell *matHeaderCellDef> Method Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.methodName}} </td>
+  </ng-container>
+
+ 
+  <!-- <ng-container matColumnDef="methodBody">
+    <th mat-header-cell *matHeaderCellDef> Method Body </th>
+    <td mat-cell *matCellDef="let element"> {{element.methodBody}} </td>
+  </ng-container> -->
+
+ 
+  <ng-container matColumnDef="severity">
+    <th mat-header-cell *matHeaderCellDef> Severity </th>
+    <td mat-cell *matCellDef="let element"> {{element.severity}} </td>
+  </ng-container>
+
+ 
+  <ng-container matColumnDef="improvement">
+    <th mat-header-cell *matHeaderCellDef> Improvement </th>
+    <td mat-cell *matCellDef="let element"> {{element.improvement}} </td>
+  </ng-container>
+
+ 
+  <ng-container matColumnDef="suggestion">
+    <th mat-header-cell *matHeaderCellDef> Suggestion </th>
+    <td mat-cell *matCellDef="let element"> {{element.suggestion}} </td>
+  </ng-container>
+
+  
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button color="primary" class="btn btn-primary button-spacing"  (click)="getCodeImprovementDetail(element)">Download Detail</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
 
 
   </form>
-<button type="button" class="btn btn-primary button-spacing" (click)="generateProjectDiagram()">Generate Project Diagram</button>
- <button type="button" class="btn btn-primary button-spacing" (click)="generateClassDiagram()">Generate Class Diagram</button>
-<button type="button" class="btn btn-primary button-spacing" (click)="generateUnitTest()">Generate Unit Test</button>
-<button type="button" class="btn btn-primary button-spacing" (click)="generateDatabaseState()">Generate Database State</button>
-<button type="button" class="btn btn-primary" (click)="generateFeatureAndPage()">Generate Feature and Page</button>
+ 
+ 
 </div>
