@@ -1,7 +1,7 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
+﻿
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
-using System.Formats.Asn1;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -53,7 +53,7 @@ namespace Yash.BusinessLogicExtractor
             try
             {
 
-                var key = @"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";
+                var key = @"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";
                 var endpoint = "https://api.openai.com/v1/chat/completions";
 
                 using var httpClient = new HttpClient();
@@ -236,8 +236,6 @@ namespace Yash.BusinessLogicExtractor
             AIClass aIClass = new AIClass();
             try
             {
-
-
                 // Get all file paths in the folder
                 CodeExtractor businessLogicExtractor = new CodeExtractor();
 
@@ -251,8 +249,8 @@ namespace Yash.BusinessLogicExtractor
                 }
 
                 //string[] filePaths = Directory.GetFiles(folderPath);
-                string allMethodsCodes = "";
-                string ConsolidatefileSummary = "";
+                string allCode = "";
+
                 foreach (string filePath in filePaths)
                 {
 
@@ -263,7 +261,7 @@ namespace Yash.BusinessLogicExtractor
                         string fileContent = File.ReadAllText(filePath);
                         string projectFileName = Path.GetFileName(filePath);
 
-                        allMethodsCodes = allMethodsCodes + Environment.NewLine + businessLogicExtractor.ExtractBusinessMethods(fileContent);
+                        allCode = allCode + Environment.NewLine + fileContent;
                         // Process the file content (e.g., print it)
 
                     }
@@ -284,7 +282,7 @@ namespace Yash.BusinessLogicExtractor
                     messages = new[]
                         {
                             new Message { role = "system", content = "You are a helpful assistant." },
-                            new Message { role = "user", content = Prompt + Environment.NewLine+ allMethodsCodes  },
+                            new Message { role = "user", content = Prompt + Environment.NewLine+ allCode  },
                             //new Message { role = "user", content = "Please give only summary." }
                             }
                 };
@@ -301,11 +299,11 @@ namespace Yash.BusinessLogicExtractor
 
             return FilesSummary;
         }
+
         public async Task<string> GetProjectDetails(string projectPath)
         {
             //read the files 
-
-            // string folderPath = projectPath;// "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
+            string finaloutput = "";
             string folderPath = projectPath;// "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\"; // Replace with the actual folder path
             AIClass aIClass = new AIClass();
             try
@@ -314,25 +312,20 @@ namespace Yash.BusinessLogicExtractor
                 CodeExtractor businessLogicExtractor = new CodeExtractor();
                 // Get all .cs and .aspx files
                 var filePaths = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
-                                         .Where(file => file.EndsWith(".cs") || file.EndsWith(".aspx"))
+                                         .Where(
+                                        file => file.EndsWith(".cs") ||
+                                        file.EndsWith(".aspx") ||
+                                        file.EndsWith(".config")
+
+                                        )
                                          .ToArray();
-
-
-                //string[] filePaths = Directory.GetFiles(folderPath);
-                string allMethodsCodes = "";
-                string ConsolidatefileSummary = "";
+                string allCodes = "";
                 foreach (string filePath in filePaths)
                 {
-
                     try
-                    {
-
-                        // Read the content of the file
+                    {                        // Read the content of the file
                         string fileContent = File.ReadAllText(filePath);
-                        string projectFileName = Path.GetFileName(filePath);
-
-                        allMethodsCodes = allMethodsCodes + Environment.NewLine + businessLogicExtractor.ExtractBusinessMethods(fileContent);
-                        // Process the file content (e.g., print it)
+                        allCodes = allCodes + Environment.NewLine + "File Name: " + Path.GetFileName(filePath) + Environment.NewLine + fileContent;
 
                     }
                     catch (Exception ex)
@@ -341,47 +334,23 @@ namespace Yash.BusinessLogicExtractor
                     }
                 }
 
-                //                "Create a detailed description of a Web Forms project by analyzing the contents of its .cs and .aspx files. The description should include:
 
-                //The purpose of each UI page(.aspx),
-                //The backend logic(.cs),
-                //How different components interact within the overall architecture,
-                //And how this structure supports the business functionality."
 
                 #region "Calling Open AI"
 
-                string prompt = @"Provide a comprehensive business-oriented description of a Web Forms project by analyzing its .aspx (UI) and .cs (code-behind) files. The description should include:
-                    The business purpose of each UI page — what user role it serves and what functionality it provides.
-                    The backend logic — how data is processed, validated, and stored, and how it supports business rules.
-                    Component interactions — how UI elements, server-side code, and data sources (e.g., databases, services) work together to fulfill business requirements.
-                      Overall architecture — how the project is structured to support scalability, maintainability, and alignment with business goals.";
+                string prompt = @"Summarize the following ASP.NET Web Forms code into a business-oriented description suitable for non-technical stakeholders.";
                 var requestBody = new RequestBody
                 {
-                    model = "gpt-4o-mini",
+                    model = "gpt -4o-mini",
                     messages = new[]
                                      {
                             new Message { role = "system", content = "You are a helpful assistant." },
-                            new Message { role = "user", content =                          prompt                            + Environment.NewLine+ allMethodsCodes  },
-
-                            }
+                            new Message { role = "user", content = prompt + Environment.NewLine+ allCodes  },
+                    }
                 };
 
-                string finaloutput = await aIClass.consumeAPIAsync("projectFileName", requestBody);
-
-
-                //requestBody = new RequestBody
-                //{
-                //    model = "gpt-4o-mini",
-                //    messages = new[]
-                //     {
-                //            new Message { role = "system", content = "You are a helpful assistant." },
-                //            new Message { role = "user", content = "do the analysis and provide Project description and Business Logic also"+BusinessLogicSummary + Environment.NewLine  },
-                //            //new Message { role = "user", content = "Please give only summary." }
-                //            }
-                //};
-
-                //var finaloutput = await aIClass.consumeAPIAsync(ConsolidatefileSummary, requestBody);
-
+                //Here are summaries of different modules of a Web Forms project.Please combine them into a single, cohesive business - oriented overview.
+                //finaloutput = await aIClass.consumeAPIAsync("projectFileName", requestBody);
                 return finaloutput;
 
                 #endregion
@@ -390,14 +359,10 @@ namespace Yash.BusinessLogicExtractor
             {
                 Console.WriteLine($"Error accessing folder {folderPath}: {ex.Message}");
             }
-
-            return "";
-
-
-
-            // generate summary 
-
+            return "";         
         }
+
+
 
         public async Task<char[]> GetProjectFeatureDetail(string projectLocation)
         {

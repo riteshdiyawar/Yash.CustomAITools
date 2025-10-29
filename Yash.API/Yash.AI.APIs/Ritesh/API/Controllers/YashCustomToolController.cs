@@ -6,6 +6,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Yash.BusinessLogicExtractor;
 
@@ -101,21 +103,11 @@ namespace YashCustomToolRitesh
         {
             AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
 
-            string projectLocation = _configuration["ProjectLocation"].ToString();
+            string projectLocation = ProjectPath;// _configuration["ProjectLocation"].ToString();
 
             var openAiResponse = await aIClass.GetProjectDetails(projectLocation);
 
-            #region Word
-            //// var openAiResponse = await GetOpenAIResponse(prompt);
-            //if (string.IsNullOrWhiteSpace(openAiResponse))
-            //    return BadRequest("Failed to generate content from OpenAI.");
-
-            //var wordBytes = GenerateWordDocument(openAiResponse);
-
-            //return File(wordBytes,
-            //            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            //            "OpenAI_Generated_Document.docx");
-            #endregion
+            
 
             #region MD
             // Convert string to byte array
@@ -136,7 +128,7 @@ namespace YashCustomToolRitesh
 
 
         [HttpGet("GetProjectFeatureDetail")]
-        public async Task<IActionResult> GetProjectDetail(string ProjectPath, string ProjectTechnologyType, string DatabaseConnection)
+        public async Task<IActionResult> GetProjectFeatureDetail(string ProjectPath, string ProjectTechnologyType, string DatabaseConnection)
         {
             AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
 
@@ -160,8 +152,12 @@ namespace YashCustomToolRitesh
             //return null;
         }
 
-      
-        
+
+
+
+
+
+
 
         #endregion
 

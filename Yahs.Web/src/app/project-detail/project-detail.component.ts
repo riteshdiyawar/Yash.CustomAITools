@@ -70,7 +70,7 @@ export class ProjectDetailComponent {
       .set('DatabaseConnection', this.databaseConnection)
       .set('ProjectTechnologyType', this.projectTechnology);
   // Call this method when the action button is clicked for project detail
-    const url = this.baseurl + 'GetProjectDetail';
+    const url = this.baseurl + 'GetProjectDetails';
     this.DownloadMD(url, params, 'Yash_CustomTools_ProjectDetail.md');
   }
 

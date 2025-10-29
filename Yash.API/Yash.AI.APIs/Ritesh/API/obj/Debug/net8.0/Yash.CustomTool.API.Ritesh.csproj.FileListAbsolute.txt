@@ -144,3 +144,4 @@ E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\r
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\Yash.CustomTool.API.Ritesh.pdb
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\Yash.CustomTool.API.Ritesh.genruntimeconfig.cache
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\ref\Yash.CustomTool.API.Ritesh.dll
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\bin\Debug\net8.0\OpenAI-DotNet.dll

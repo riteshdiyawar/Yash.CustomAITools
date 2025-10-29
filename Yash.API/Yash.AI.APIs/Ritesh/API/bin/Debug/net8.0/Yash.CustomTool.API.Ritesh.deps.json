@@ -18,6 +18,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.1",
           "Newtonsoft.Json": "13.0.1",
+          "OpenAI-DotNet": "8.8.3",
           "Swashbuckle.AspNetCore.Swagger": "7.0.0",
           "Swashbuckle.AspNetCore.SwaggerGen": "5.0.0",
           "Swashbuckle.AspNetCore.SwaggerUI": "8.0.0",
@@ -646,6 +647,14 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {
             "assemblyVersion": "4.7.0.5",
             "fileVersion": "4.7.0.5148"
+          }
+        }
+      },
+      "OpenAI-DotNet/8.8.3": {
+        "runtime": {
+          "lib/net8.0/OpenAI-DotNet.dll": {
+            "assemblyVersion": "8.8.3.0",
+            "fileVersion": "8.8.3.0"
           }
         }
       },
@@ -1940,6 +1949,13 @@
       "sha512": "sha512-qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
+    },
+    "OpenAI-DotNet/8.8.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q1eyJ4RDzqhdhfVi7vOVaP0fUp0tC/4wQKJCj9AXP9VxwjlEERAluB7rIzdt2tt1OeatOl+Pj/2lqpOBNJIT3Q==",
+      "path": "openai-dotnet/8.8.3",
+      "hashPath": "openai-dotnet.8.8.3.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",

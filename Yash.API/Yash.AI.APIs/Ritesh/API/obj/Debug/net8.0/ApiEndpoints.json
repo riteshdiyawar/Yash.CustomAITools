@@ -73,6 +73,46 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RagApi.Controllers.CodeController",
+    "Method": "QueryCode",
+    "RelativePath": "api/Code/query",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RagApi.Controllers.CodeController",
+    "Method": "UploadCode",
+    "RelativePath": "api/Code/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Yash.CustomTool.API.Ritesh.Controllers.OpenAIAnalysisController",
+    "Method": "AnalyzeFileFromPath",
+    "RelativePath": "api/OpenAIAnalysis/analyze-from-path",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Yash.CustomTool.API.Ritesh.Controllers.OpenAIAnalysisController",
+    "Method": "GenerateBusinessDocument",
+    "RelativePath": "api/OpenAIAnalysis/GenerateBusinessDocument",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OpenAIDocumentController",
     "Method": "DownloadGeneratedDoc",
     "RelativePath": "api/OpenAIDocument/download",
@@ -122,32 +162,6 @@
     "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
     "Method": "GetCodeImprovement",
     "RelativePath": "api/YashCustomTool/GetCodeImprovement",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ProjectPath",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ProjectTechnologyType",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "DatabaseConnection",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
-    "Method": "GetDatabaseDetailandImprovement",
-    "RelativePath": "api/YashCustomTool/GetDatabaseDetailandImprovement",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -224,7 +238,7 @@
   },
   {
     "ContainingType": "YashCustomToolRitesh.YashCustomToolController",
-    "Method": "GetProjectDetail",
+    "Method": "GetProjectFeatureDetail",
     "RelativePath": "api/YashCustomTool/GetProjectFeatureDetail",
     "HttpMethod": "GET",
     "IsController": true,
