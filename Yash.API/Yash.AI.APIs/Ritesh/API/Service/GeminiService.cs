@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Yash.CustomTool.API.Ritesh.Model;
 
 
 
@@ -19,7 +20,7 @@ namespace Yash.CustomTool.API.Ritesh.Service
     public class GeminiService
     {
         private readonly HttpClient _httpClient;
-        private readonly string _apiKey = "AIzaSyB_3FzJaiRRXFK-Ni2k_9ljOKJG4-XJFTw";
+        //private readonly string _apiKey = "AIzaSyB_3FzJaiRRXFK-Ni2k_9ljOKJG4-XJFTw";
 
         public GeminiService(HttpClient httpClient)
         {
@@ -48,7 +49,7 @@ namespace Yash.CustomTool.API.Ritesh.Service
                 HttpMethod.Post,
                 "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent");
 
-            request.Headers.Add("X-Goog-Api-Key", _apiKey);
+            request.Headers.Add("X-Goog-Api-Key", AIHelper.OPEN_Gemini_Key);
             request.Content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
 
             var response = await _httpClient.SendAsync(request);
@@ -101,7 +102,7 @@ namespace Yash.CustomTool.API.Ritesh.Service
                 HttpMethod.Post,
                 "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent");
 
-            request.Headers.Add("X-Goog-Api-Key", _apiKey);
+            request.Headers.Add("X-Goog-Api-Key", AIHelper.OPEN_Gemini_Key);
             request.Content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
 
             var response = await _httpClient.SendAsync(request);

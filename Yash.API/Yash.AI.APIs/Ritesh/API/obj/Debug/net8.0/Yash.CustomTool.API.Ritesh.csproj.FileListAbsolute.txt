@@ -132,11 +132,6 @@ E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\bin\Debug\net8.0\r
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\bin\Debug\net8.0\System.Net.Http.Formatting.dll
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets.build.json
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets.development.json
-E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets\msbuild.Yash.CustomTool.API.Ritesh.Microsoft.AspNetCore.StaticWebAssets.props
-E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets\msbuild.build.Yash.CustomTool.API.Ritesh.props
-E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Yash.CustomTool.API.Ritesh.props
-E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Yash.CustomTool.API.Ritesh.props
-E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets.pack.json
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\scopedcss\bundle\Yash.CustomTool.API.Ritesh.styles.css
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\Yash.Cus.968D977A.Up2Date
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\Yash.CustomTool.API.Ritesh.dll
@@ -145,3 +140,11 @@ E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\Y
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\Yash.CustomTool.API.Ritesh.genruntimeconfig.cache
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\ref\Yash.CustomTool.API.Ritesh.dll
 E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\bin\Debug\net8.0\OpenAI-DotNet.dll
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\bin\Debug\net8.0\Yash.CustomTool.API.Ritesh.staticwebassets.endpoints.json
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\rpswa.dswa.cache.json
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\rjimswa.dswa.cache.json
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets.build.json.cache
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\Yash\Yash.Custom.AI.Tools\Yash.API\Yash.AI.APIs\Ritesh\API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

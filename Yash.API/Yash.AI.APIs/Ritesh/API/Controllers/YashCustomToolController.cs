@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using OpenAI.Responses;
 using System;
 using System.IO;
 using System.Linq;
@@ -46,6 +47,16 @@ namespace YashCustomToolRitesh
 
 
         #region Ritesh
+
+        [HttpGet("GetControlInfo")]
+        public async Task<IActionResult> GetControlInfo(string ProjectPath = "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\Controls", string ProjectTechnologyType = "ASPXNET", string DatabaseConnection = "")
+        {
+            AIClass aIClass = new AIClass(ProjectPath, ProjectTechnologyType, DatabaseConnection);
+
+            var openAiResponse = await aIClass.GetControlInfo(ProjectPath, ProjectTechnologyType);
+            return Content(openAiResponse, "application/json");
+        }
+
         [HttpGet("GetCodeImprovement")]
         public async Task<IActionResult> GetCodeImprovement
             (string ProjectPath = "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode", string ProjectTechnologyType = "ASPXNET", string DatabaseConnection = "")
@@ -107,7 +118,7 @@ namespace YashCustomToolRitesh
 
             var openAiResponse = await aIClass.GetProjectDetails(projectLocation);
 
-            
+
 
             #region MD
             // Convert string to byte array

@@ -9,6 +9,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Yash.CustomTool.API.Ritesh.Model;
 using YashCustomToolRitesh;
 
 namespace Yash.BusinessLogicExtractor
@@ -46,41 +47,41 @@ namespace Yash.BusinessLogicExtractor
         }
 
         #region Common
-        public async Task<string> consumeAPIAsync(string FileName, RequestBody requestBody)
-        {
-            string responseString = "";
-            string responseContent = "";
-            try
-            {
+        //public async Task<string> consumeAPIAsync(string FileName, RequestBody requestBody)
+        //{
+        //    string responseString = "";
+        //    string responseContent = "";
+        //    try
+        //    {
 
-                var key = @"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";
-                var endpoint = "https://api.openai.com/v1/chat/completions";
+        //        var key = @"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";
+        //        var endpoint = "https://api.openai.com/v1/chat/completions";
 
-                using var httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", key);
+        //        using var httpClient = new HttpClient();
+        //        httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", key);
 
-                var response = await httpClient.PostAsJsonAsync(endpoint, requestBody);
-                responseContent = await response.Content.ReadAsStringAsync();
+        //        var response = await httpClient.PostAsJsonAsync(endpoint, requestBody);
+        //        responseContent = await response.Content.ReadAsStringAsync();
 
 
-                using var doc = JsonDocument.Parse(responseContent);
-                responseString = doc.RootElement
-                             .GetProperty("choices")[0]
-                             .GetProperty("message")
-                             .GetProperty("content")
-                             .GetString();
-                //var imageUrl = doc.RootElement.GetProperty("image_url");// ("image_url", out var imageElement) ? imageElement.GetString() : null;
-                return responseString;
+        //        using var doc = JsonDocument.Parse(responseContent);
+        //        responseString = doc.RootElement
+        //                     .GetProperty("choices")[0]
+        //                     .GetProperty("message")
+        //                     .GetProperty("content")
+        //                     .GetString();
+        //        //var imageUrl = doc.RootElement.GetProperty("image_url");// ("image_url", out var imageElement) ? imageElement.GetString() : null;
+        //        return responseString;
 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-                responseString = responseContent + ex.ToString();
-            }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine(ex.ToString());
+        //        responseString = responseContent + ex.ToString();
+        //    }
 
-            return responseString;
-        }
+        //    return responseString;
+        //}
 
         public void SaveDocuemnt(string Content = "TEST", string FileName = "TEST", string FileType = "MD")
         {
@@ -215,7 +216,7 @@ namespace Yash.BusinessLogicExtractor
                             }
                 };
                 // pass to AI 
-                string FilesSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody); ;
+                string FilesSummary = await AIHelper.consumeAPIAsync("projectFileName", requestBody); ;
 
 
                 return FilesSummary;
@@ -287,7 +288,7 @@ namespace Yash.BusinessLogicExtractor
                             }
                 };
                 // pass to AI 
-                FilesSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody); ;
+                FilesSummary = await AIHelper.consumeAPIAsync("projectFileName", requestBody); ;
 
 
                 #endregion
@@ -436,7 +437,7 @@ namespace Yash.BusinessLogicExtractor
                 string singleFileSummary = "";
 
 
-                singleFileSummary = await aIClass.consumeAPIAsync("projectFileName", requestBody);
+                singleFileSummary = await AIHelper.consumeAPIAsync("projectFileName", requestBody);
                 return singleFileSummary;
             }
             catch (Exception ex)
@@ -452,6 +453,80 @@ namespace Yash.BusinessLogicExtractor
         internal async Task<char[]> GetUnitTestGenerator(string projectLocation)
         {
             throw new NotImplementedException();
+        }
+
+        internal async Task<string> GetControlInfo(string projectPath, string projectTechnologyType)
+        {
+
+            //read the files 
+            string folderPath = projectPath;
+            AIClass aIClass = new AIClass();
+            try
+            {
+                                
+                string rootPath = projectPath;
+               
+             
+                if (projectTechnologyType.ToLower() == "AspxNet".ToLower())
+                {
+
+                    // Get all .cs and .aspx files
+                    filePaths = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
+                                       .Where(file =>   file.EndsWith(".aspx"))
+                                       .ToArray();
+                }
+
+                //string[] filePaths = Directory.GetFiles(folderPath);
+                string allCode = "";
+
+                foreach (string filePath in filePaths)
+                {
+
+                    try
+                    {
+
+                        // Read the content of the file
+                        string fileContent = File.ReadAllText(filePath);
+                        string projectFileName = Path.GetFileName(filePath);
+
+                        allCode = allCode + Environment.NewLine + fileContent;
+                        // Process the file content (e.g., print it)
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error reading file {filePath}: {ex.Message}");
+                    }
+                }
+
+
+
+
+                string Prompt = AIHelper.OPEN_AI_Prompt_GetControls;
+                var requestBody = new RequestBody
+                {
+                    model = "gpt-4o-mini",
+                    messages = new[]
+                        {
+                            new Message { role = "system", content = "You are a helpful assistant." },
+                            new Message { role = "user", content = Prompt + Environment.NewLine+ allCode  },
+                            //new Message { role = "user", content = "Please give only summary." }
+                            }
+                };
+                // pass to AI 
+                string singleFileSummary = "";
+
+                singleFileSummary = await AIHelper.consumeAPIAsync("projectFileName", requestBody);
+                return singleFileSummary;
+            }
+            catch (Exception ex)
+            {
+              
+            }
+
+
+            return "";
+
         }
 
 

@@ -233,6 +233,51 @@ namespace Yash.CustomTool.API.Ritesh.Controllers
         }
 
 
+        [HttpGet("GetCodeWebFormControls")]
+        public async Task<IActionResult> GetCodeWebFormControls
+               (string ProjectPath = "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\Controls", string ProjectTechnologyType = "ASPXNET", string DatabaseConnection = "")
+
+        {
+
+
+            GeminiChatRequest request;
+
+            string projectCode = "";
+
+            if (ProjectTechnologyType.ToUpper() == "ASPXNET")
+            {
+                var extractor = new AspNetCodeExtractor();
+                projectCode = extractor.GetCodeWebFormControls(ProjectPath);
+            }
+            else if (ProjectTechnologyType.ToUpper() == "ANGULAR")
+            {
+                var extractor = new AngularCodeExtractor();
+                projectCode = extractor.ExtractCode(ProjectPath);
+            }
+            else
+            {
+                return BadRequest("Unsupported Project Technology Type.");
+            }
+
+            string Prompt = AIHelper.OPEN_AI_Prompt_GetControls;
+
+            //"Provide suggestions  for improving code quality, performance, and maintainability. I want just summary only"
+            request = new GeminiChatRequest
+            {
+                Prompt = $"" + Prompt + Environment.NewLine + projectCode
+            };
+
+            if (string.IsNullOrWhiteSpace(request.Prompt))
+                return BadRequest("Prompt is required.");
+
+            var response = await _geminiService.GetChatResponseAsync(request.Prompt);
+
+                response = response.Replace("```json", "").Replace("```", "");
+            return Content(response, "application/json");
+
+
+        }
+
 
 
     }

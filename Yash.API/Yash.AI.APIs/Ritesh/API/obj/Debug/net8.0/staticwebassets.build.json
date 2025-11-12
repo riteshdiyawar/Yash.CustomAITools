@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "uiPWq9sgHfyYliGWINy8AT1Eyp5Cr5bpRe4qDNsStPA=",
-  "Source": "Yash.CustomTool.API.Ritesh",
-  "BasePath": "_content/Yash.CustomTool.API.Ritesh",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"euCyXzfaeNAULRX4eYFh58AQSFUC1D8vp4YoiSjN9eA=","Source":"Yash.CustomTool.API.Ritesh","BasePath":"_content/Yash.CustomTool.API.Ritesh","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

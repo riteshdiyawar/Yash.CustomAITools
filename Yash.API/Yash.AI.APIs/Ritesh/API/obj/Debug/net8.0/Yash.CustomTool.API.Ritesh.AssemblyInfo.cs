@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Yash.CustomTool.API.Ritesh")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed6c16988344eaea25031e844c923636f9e09cb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1f9e59e4e5f56e6b5063ecce1ffba68d2cf68a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Yash.CustomTool.API.Ritesh")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Yash.CustomTool.API.Ritesh")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

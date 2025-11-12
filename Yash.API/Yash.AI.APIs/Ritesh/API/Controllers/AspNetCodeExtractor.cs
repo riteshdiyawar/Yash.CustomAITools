@@ -118,5 +118,41 @@ namespace Yash.CustomTool.API.Ritesh.Controllers
             return projectFiles;
         }
 
+        internal string GetCodeWebFormControls(string projectPath)
+        {
+            string rootPath = projectPath;
+
+ 
+                // Get all .cs and .aspx files
+                filePaths = Directory.GetFiles(projectPath, "*.*", SearchOption.AllDirectories)
+                                   .Where(file => file.EndsWith(".aspx"))
+                                   .ToArray();
+             
+
+            //string[] filePaths = Directory.GetFiles(folderPath);
+            string allCode = "";
+
+            foreach (string filePath in filePaths)
+            {
+
+                try
+                {
+
+                    // Read the content of the file
+                    string fileContent = File.ReadAllText(filePath);
+                    string projectFileName = Path.GetFileName(filePath);
+
+                    allCode = allCode + Environment.NewLine + fileContent;
+                    // Process the file content (e.g., print it)
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error reading file {filePath}: {ex.Message}");
+                }
+            }
+            return allCode;
+
+        }
     }
 }
