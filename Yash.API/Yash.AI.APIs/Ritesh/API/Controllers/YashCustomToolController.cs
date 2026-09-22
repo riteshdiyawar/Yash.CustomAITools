@@ -43,8 +43,8 @@ namespace YashCustomToolRitesh
         //}
 
 
-        private string endpoint = "https://az-adgm-myadgm-azureopenai.openai.azure.com";
-        private string apiKey = "5861ce85085f4f2285d2cd1dc1e7f62b";
+        //private string endpoint = "https://az-adgm-myadgm-azureopenai.openai.azure.com";
+        //private string apiKey = "5861ce85085f4f2285d2cd1dc1e7f62b";
        
         // Create OpenAI Client
           
