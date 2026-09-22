@@ -50,18 +50,18 @@ namespace Yash.CustomTool.API.Ritesh.Model
 
         #endregion
 
-        public static string OPEN_Gemini_Key = @"AIzaSyD7QnlTuyTJ1RWmK2DA8okmGyBLSiJvgDo";
+        //public static string OPEN_Gemini_Key = @"AIzaSyD7QnlTuyTJ1RWmK2DA8okmGyBLSiJvgDo";
 
 
-        public static string OPEN_AI_AssistantId = @"asst_ANrq46eDqR5zLIMf5op6EiUO";
+        //public static string OPEN_AI_AssistantId = @"asst_ANrq46eDqR5zLIMf5op6EiUO";
 
-        public static string AssistantName = "";
-        public static string OPEN_AI_Key = @"7OBI4px4KXZ1Awhltacicl63IA701Q5krKgwjuPUPKo9MTKapUcjJQQJ99BKACYeBjFXJ3w3AAABACOGtZI6";
+        //public static string AssistantName = "";
+        //public static string OPEN_AI_Key = @"7OBI4px4KXZ1Awhltacicl63IA701Q5krKgwjuPUPKo9MTKapUcjJQQJ99BKACYeBjFXJ3w3AAABACOGtZI6";
 
 
-        public static string AzureOpenAI_Endpoint = "https://poc5-openai.openai.azure.com/";
-        public static string AzureOpenAI_ApiKey = "7OBI4px4KXZ1Awhltacicl63IA701Q5krKgwjuPUPKo9MTKapUcjJQQJ99BKACYeBjFXJ3w3AAABACOGtZI6";
-        public static string AzureOpenAI_DeploymentName = "gpt-4o";
+        //public static string AzureOpenAI_Endpoint = "https://poc5-openai.openai.azure.com/";
+        //public static string AzureOpenAI_ApiKey = "7OBI4px4KXZ1Awhltacicl63IA701Q5krKgwjuPUPKo9MTKapUcjJQQJ99BKACYeBjFXJ3w3AAABACOGtZI6";
+        //public static string AzureOpenAI_DeploymentName = "gpt-4o";
 
            
 
