@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Azure.AI.OpenAI": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "DocumentFormat.OpenXml": {
               "target": "Package",
               "version": "[3.3.0, )"
@@ -93,6 +97,10 @@
             "OpenAI-DotNet": {
               "target": "Package",
               "version": "[8.8.3, )"
+            },
+            "SharpToken": {
+              "target": "Package",
+              "version": "[2.0.4, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",

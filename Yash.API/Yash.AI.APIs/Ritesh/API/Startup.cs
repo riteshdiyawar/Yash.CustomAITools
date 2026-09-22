@@ -10,7 +10,9 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.IO;
 using System.Text;
-using Yash.CustomTool.API.Ritesh.Service;
+using Yash.BusinessLogicExtractor;
+using Yash.CustomTool.API.Ritesh.BL;
+ 
 
 namespace YashCustomToolRitesh
 {
@@ -63,7 +65,7 @@ namespace YashCustomToolRitesh
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
-            services.AddHttpClient<GeminiService>();
+            //services.AddHttpClient<GeminiService>();
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
@@ -71,6 +73,7 @@ namespace YashCustomToolRitesh
             });
 
             services.Configure<AppSettings>(Configuration.GetSection("ConfigSettings"));
+            services.AddScoped<IOpenAiService, YashOpenAIService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

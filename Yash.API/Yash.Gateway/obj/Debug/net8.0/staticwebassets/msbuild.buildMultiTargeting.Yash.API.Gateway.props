@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Yash.API.Gateway.props" />
-</Project>

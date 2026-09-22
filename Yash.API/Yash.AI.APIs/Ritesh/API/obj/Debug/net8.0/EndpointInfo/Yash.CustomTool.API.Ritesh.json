@@ -1,0 +1,291 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Yash Custom Tool API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/YashCustomTool/GetControlInfo": {
+      "get": {
+        "tags": [
+          "YashCustomTool"
+        ],
+        "parameters": [
+          {
+            "name": "ProjectPath",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\Data"
+            }
+          },
+          {
+            "name": "ProjectTechnologyType",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ASPXNET"
+            }
+          },
+          {
+            "name": "DatabaseConnection",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/YashCustomTool/GetCodeImprovement": {
+      "get": {
+        "tags": [
+          "YashCustomTool"
+        ],
+        "parameters": [
+          {
+            "name": "ProjectPath",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode"
+            }
+          },
+          {
+            "name": "ProjectTechnologyType",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ASPXNET"
+            }
+          },
+          {
+            "name": "DatabaseConnection",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/YashCustomTool/GetCodeImprovementDetail": {
+      "get": {
+        "tags": [
+          "YashCustomTool"
+        ],
+        "parameters": [
+          {
+            "name": "MethodName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ProjectPath",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/YashCustomTool/GetProjectDiagram": {
+      "get": {
+        "tags": [
+          "YashCustomTool"
+        ],
+        "parameters": [
+          {
+            "name": "ProjectPath",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "E:\\Project Applied\\Anchor.SuretyPortal"
+            }
+          },
+          {
+            "name": "ProjectTechnologyType",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ASPXNET"
+            }
+          },
+          {
+            "name": "DatabaseConnection",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/YashCustomTool/GetProjectFeatureDetail": {
+      "get": {
+        "tags": [
+          "YashCustomTool"
+        ],
+        "parameters": [
+          {
+            "name": "ProjectPath",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "E:\\Yash\\Yash.BusinessLogicExtractor\\SourceCode\\FEATURE"
+            }
+          },
+          {
+            "name": "ProjectTechnologyType",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ASPXNET"
+            }
+          },
+          {
+            "name": "DatabaseConnection",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/YashCustomTool/GetProjectDetails": {
+      "get": {
+        "tags": [
+          "YashCustomTool"
+        ],
+        "parameters": [
+          {
+            "name": "ProjectPath",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "E:\\Project Applied\\Anchor.SuretyPortal"
+            }
+          },
+          {
+            "name": "ProjectTechnologyType",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ASPX.NET"
+            }
+          },
+          {
+            "name": "DatabaseConnection",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/YashCustomTool/SampleMDFileDownload": {
+      "get": {
+        "tags": [
+          "YashCustomTool"
+        ],
+        "parameters": [
+          {
+            "name": "ProjectPath",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "E:\\Project Applied\\Anchor.SuretyPortal"
+            }
+          },
+          {
+            "name": "ProjectTechnologyType",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ASPX.NET"
+            }
+          },
+          {
+            "name": "DatabaseConnection",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/YashCustomTool/SampleDownload": {
+      "get": {
+        "tags": [
+          "YashCustomTool"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/YashCustomTool/DownloadGeneratedWordDoc": {
+      "get": {
+        "tags": [
+          "YashCustomTool"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

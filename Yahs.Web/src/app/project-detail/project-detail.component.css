@@ -9,3 +9,7 @@
 .button-spacing {
   margin-right: 10px;
 }
+
+.hidden {
+  display: none;
+}

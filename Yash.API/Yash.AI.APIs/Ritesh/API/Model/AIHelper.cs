@@ -1,21 +1,54 @@
-﻿using System.Net.Http.Headers;
+﻿using Azure;
+using Azure.AI.OpenAI;
+using DocumentFormat.OpenXml.Office2016.Excel;
+using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.Vml;
+using Microsoft.AspNetCore.Mvc;
+using OpenAI;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System;
 using Yash.BusinessLogicExtractor;
-using DocumentFormat.OpenXml.Vml;
+
 
 namespace Yash.CustomTool.API.Ritesh.Model
 {
     public static class AIHelper
     {
-        public static string OPEN_AI_Prompt_GenerateBRD = @"Based on the uploaded file,Summarize the following ASP.NET Web Forms code into a business-oriented description suitable for non-technical stakeholders.";
+        #region Prompt        
+        //public static string OPEN_AI_Prompt_GenerateBRD = @"Based on the uploaded file,Summarize the following ASP.NET Web Forms code into a business-oriented description suitable for non-technical stakeholders.";
 
-        public static string OPEN_AI_Key = @"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";
+        public static string OPEN_AI_Prompt_GetControls = @"This is a Web Forms application. Could you please analyze this .aspx page and provide a count of all UI controls present I need the output in JSON format, showing each control type and its count — something I can bind to a grid. The JSON should include the following columns 
+          ControlName: Name of Control 
+          Count: Count of control " + Environment.NewLine + "expecting JSON Format only no other information";
 
 
-        public static string OPEN_AI_Prompt_GetControls = @"This is a Web Forms application. Could you please analyze this .aspx page and provide a count of all UI controls present? I need the output in JSON format, showing each control type and its count — something I can bind to a grid." +             "The JSON should include the following columns 1. Control Name 2. Count"            ;
+        public static string OPEN_AI_Prompt_GetCodeImprovementSummary = @"Analyze my code and provide suggestions to improve code quality, performance, and maintainability.
+             I want the output in JSON format so I can bind it to a grid in Angular.
+             The JSON should include the following columns:
+             methodName: Name of the method
+             severity: Severity level of the issue (e.g., Low, Medium, High)
+             improvement: Area of improvement (e.g., readability, performance, structure)
+             suggestion: Specific suggestion for improvement" + Environment.NewLine + "expecting JSON Format only no other information";
+
+
+        public static string OPEN_AI_Prompt_GetMethodImprovementDetail = @"Please analyze my code and provide detailed suggestions to improve its quality. Also, generate an auto-corrected version of the method with best practices applied.";
+
+        public static string OPEN_AI_Prompt_DesignArch = "Generate a high-level conceptual architecture for an ASP.NET Web Forms application." + Environment.NewLine + "The output should be structured and easy to read, using boxes or separators to represent layers.";
+
+        public static string OPEN_AI_Prompt_PageLevelFeature = @"Analyze the provided ASP.NET Web Forms page (.aspx and .cs files) and create a concise one-page            feature  summary. The summary should include:
+                Page Name and Purpose – Explain the business goal or functionality of the page in 2–3 sentences.
+                Key Features – List major functionalities
+                Security or Performance Notes – Highlight any role-based access, input validation, or caching implemented.";
+
+        public static string OPEN_AI_Prompt_GenerateBRD  = @"Create a comprehensive Business Requirements Document (BRD), with following feature summary. The BRD should include these sections: Document Overview, Business Objectives, Scope, Stakeholders, Functional Requirements, Non-Functional Requirements, Assumptions & Constraints, Dependencies, UI/UX Requirements, Data Requirements, Workflow/Use Cases, and Acceptance Criteria. Apply professional formatting with headings, bullet points, and tables where appropriate. Include placeholders for diagrams and ensure the document is suitable for stakeholder review.";
+
+        #endregion
 
         public static string OPEN_Gemini_Key = @"AIzaSyD7QnlTuyTJ1RWmK2DA8okmGyBLSiJvgDo";
 
@@ -23,44 +56,18 @@ namespace Yash.CustomTool.API.Ritesh.Model
         public static string OPEN_AI_AssistantId = @"asst_ANrq46eDqR5zLIMf5op6EiUO";
 
         public static string AssistantName = "";
+        public static string OPEN_AI_Key = @"7OBI4px4KXZ1Awhltacicl63IA701Q5krKgwjuPUPKo9MTKapUcjJQQJ99BKACYeBjFXJ3w3AAABACOGtZI6";
 
 
+        public static string AzureOpenAI_Endpoint = "https://poc5-openai.openai.azure.com/";
+        public static string AzureOpenAI_ApiKey = "7OBI4px4KXZ1Awhltacicl63IA701Q5krKgwjuPUPKo9MTKapUcjJQQJ99BKACYeBjFXJ3w3AAABACOGtZI6";
+        public static string AzureOpenAI_DeploymentName = "gpt-4o";
 
-        public static async Task<string> consumeAPIAsync(string FileName, RequestBody requestBody)
-        {
-            string responseString = "";
-            string responseContent = "";
-            try
-            {
-
-                //var key = @"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";
-                var endpoint = "https://api.openai.com/v1/chat/completions";
-
-                using var httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", OPEN_AI_Key);
-
-                var response = await httpClient.PostAsJsonAsync(endpoint, requestBody);
-                responseContent = await response.Content.ReadAsStringAsync();
+           
 
 
-                using var doc = JsonDocument.Parse(responseContent);
-                responseString = doc.RootElement
-                             .GetProperty("choices")[0]
-                             .GetProperty("message")
-                             .GetProperty("content")
-                             .GetString();
-                //var imageUrl = doc.RootElement.GetProperty("image_url");// ("image_url", out var imageElement) ? imageElement.GetString() : null;
-                return responseString;
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-                responseString = responseContent + ex.ToString();
-            }
-
-            return responseString;
-        }
 
     }
 }
+
+
